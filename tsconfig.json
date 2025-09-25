@@ -9,7 +9,7 @@
     }
   ],
   "compilerOptions": {
-    "baseUrl": "/clinic/",
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     }
