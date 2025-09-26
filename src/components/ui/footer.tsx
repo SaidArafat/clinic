@@ -80,7 +80,7 @@ export function Footer() {
           ))}
         </ul>
       </section>
-      <section className="md:col-span-4 bg-amber-100">
+      <section className="md:col-span-4">
         <p className="flex items-start justify-center text-center">
           <span className="flex items-center gap-1 ms-3 md:mx-1">
             <Copyright size={20} strokeWidth={2} />
