@@ -1,9 +1,11 @@
+import { About } from '@/components/about'
+import { Navbar } from '@/components/nav-bar'
 import { DirectionProvider } from '@radix-ui/react-direction'
 import { useTranslation } from 'react-i18next'
-import { Navbar } from '@/components/Navbar'
+import { Cursor } from './components/ui/cursor'
 
 export default function App() {
-  const { t, i18n } = useTranslation()
+  const { i18n } = useTranslation()
 
   const switchLanguage = (lang: 'en' | 'ar') => {
     i18n.changeLanguage(lang)
@@ -18,7 +20,9 @@ export default function App() {
           switchLanguage(i18n.language === 'ar' ? 'en' : 'ar')
         }
       />
-      <h1>{t('welcome')}</h1>
+      <Cursor>
+        <About />
+      </Cursor>
     </DirectionProvider>
   )
 }

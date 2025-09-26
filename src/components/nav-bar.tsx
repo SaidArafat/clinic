@@ -147,7 +147,7 @@ const defaultNavigationLinks: NavbarNavItem[] = [
     ]
   },
   {
-    label: 'about',
+    label: 'who-we-are',
     submenu: true,
     type: 'icon',
     items: [
@@ -255,7 +255,7 @@ export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
                                   <li key={itemIndex}>
                                     <button
                                       onClick={e => e.preventDefault()}
-                                      className="flex w-full items-center rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground cursor-pointer no-underline"
+                                      className="flex w-full items-center rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground  no-underline"
                                     >
                                       {t(item.label)}
                                     </button>
@@ -266,7 +266,7 @@ export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
                           ) : (
                             <button
                               onClick={e => e.preventDefault()}
-                              className="flex w-full items-center rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground cursor-pointer no-underline"
+                              className="flex w-full items-center rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground  no-underline"
                             >
                               {t(link.label)}
                             </button>
@@ -298,7 +298,7 @@ export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
             <div className="flex items-center gap-6">
               <button
                 onClick={e => e.preventDefault()}
-                className="flex items-center space-x-2 text-primary hover:text-primary/90 transition-colors cursor-pointer"
+                className="flex items-center space-x-2 text-primary hover:text-primary/90 transition-colors "
               >
                 <div className="text-2xl">{logo}</div>
                 <span className="hidden font-bold text-xl sm:inline-block">
@@ -324,7 +324,7 @@ export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
                                     <NavigationMenuLink asChild>
                                       <button
                                         onClick={e => e.preventDefault()}
-                                        className="flex h-full w-full select-none flex-col justify-center items-center text-center rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md cursor-pointer"
+                                        className="flex h-full w-full select-none flex-col justify-center items-center text-center rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md "
                                       >
                                         <div className="mb-3 text-xl font-medium">
                                           shadcn.io
@@ -393,10 +393,7 @@ export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
                         ) : (
                           <NavigationMenuLink
                             href={link.href}
-                            className={cn(
-                              navigationMenuTriggerStyle(),
-                              'cursor-pointer'
-                            )}
+                            className={cn(navigationMenuTriggerStyle(), '')}
                             onClick={e => e.preventDefault()}
                           >
                             {t(link.label)}
@@ -427,7 +424,7 @@ export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
             <Button
               variant="outline"
               size="icon"
-              className="cursor-pointer"
+              className=""
               onClick={e => {
                 e.preventDefault()
                 theme === 'dark' ? setTheme('light') : setTheme('dark')
@@ -477,7 +474,7 @@ const ListItem = React.forwardRef<
         ref={ref}
         onClick={e => e.preventDefault()}
         className={cn(
-          'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground cursor-pointer',
+          'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
           className
         )}
         {...props}
