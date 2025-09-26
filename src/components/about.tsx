@@ -6,10 +6,7 @@ export function About() {
   const { t } = useTranslation()
 
   return (
-    <section
-      className="container mx-auto py-10 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-4 md:px-6"
-      id="about"
-    >
+    <section id="about">
       <section className="grid gap-10 md:grid-cols-2 md:items-center">
         <main className="flex flex-col text-center md:text-start">
           <header>

@@ -11,13 +11,20 @@ import enLanding from '../../locales/en/landing.json'
 import arAbout from '../../locales/ar/about.json'
 import enAbout from '../../locales/en/about.json'
 
+import arFooter from '../../locales/ar/footer.json'
+import enFooter from '../../locales/en/footer.json'
+
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources: {
-      en: { translation: { ...enLanding, ...enNavbar, ...enAbout } },
-      ar: { translation: { ...arLanding, ...arNavbar, ...arAbout } }
+      en: {
+        translation: { ...enLanding, ...enNavbar, ...enAbout, ...enFooter }
+      },
+      ar: {
+        translation: { ...arLanding, ...arNavbar, ...arAbout, ...arFooter }
+      }
     },
     fallbackLng: 'en',
     interpolation: { escapeValue: false },
