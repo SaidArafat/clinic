@@ -10,7 +10,7 @@ export function Footer() {
   const { t } = useTranslation()
 
   return (
-    <footer className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-5">
+    <footer className="mt-16 py-5 grid grid-cols-1 md:grid-cols-4 gap-5 border-t">
       <section>
         <h2 className="text-xl font-medium mb-2">{t('footer.info.title')}</h2>
         <h3 className="text-lg">{t('footer.info.position')}</h3>
@@ -62,7 +62,7 @@ export function Footer() {
           <li>{t('footer.follow.working-hours.hours.2')}</li>
         </ul>
       </section>
-      <section className="md:col-span-4 py-5 mt-10  border-y">
+      <section className="md:col-span-4 py-5  border-y">
         <h2 className="text-xl text-center mb-5">
           {t('footer.specializations.title')}
         </h2>
