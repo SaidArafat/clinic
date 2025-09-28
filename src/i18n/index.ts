@@ -14,16 +14,31 @@ import enAbout from '../../locales/en/about.json'
 import arFooter from '../../locales/ar/footer.json'
 import enFooter from '../../locales/en/footer.json'
 
+import arServices from '../../locales/ar/services.json'
+import enServices from '../../locales/en/services.json'
+
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources: {
       en: {
-        translation: { ...enLanding, ...enNavbar, ...enAbout, ...enFooter }
+        translation: {
+          ...enLanding,
+          ...enNavbar,
+          ...enAbout,
+          ...enFooter,
+          ...enServices
+        }
       },
       ar: {
-        translation: { ...arLanding, ...arNavbar, ...arAbout, ...arFooter }
+        translation: {
+          ...arLanding,
+          ...arNavbar,
+          ...arAbout,
+          ...arFooter,
+          ...arServices
+        }
       }
     },
     fallbackLng: 'en',

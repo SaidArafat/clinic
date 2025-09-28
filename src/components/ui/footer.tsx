@@ -10,7 +10,7 @@ export function Footer() {
   const { t } = useTranslation()
 
   return (
-    <footer className="mt-16 py-5 grid grid-cols-1 md:grid-cols-4 gap-5 border-t">
+    <footer className="py-8 grid grid-cols-1 md:grid-cols-4 gap-5">
       <section>
         <h2 className="text-xl font-medium mb-2">{t('footer.info.title')}</h2>
         <h3 className="text-lg">{t('footer.info.position')}</h3>

@@ -1,0 +1,38 @@
+{
+  "services": {
+    "title": "Our Services",
+    "description": "Comprehensive physiotherapy services with over 20 years of experience",
+    "list": {
+      "spine-back-pain": {
+        "title": "Spine & Back Pain",
+        "scoliosis": "Scoliosis",
+        "disc-herniation": "Disc Herniation",
+        "sciatica": "Sciatica",
+        "spinal-muscle-imbalance": "Spinal Muscle Imbalance",
+        "kyphosis": "Kyphosis",
+        "vertebral-roughness": "Vertebral Roughness",
+        "vertebral-displacement": "Vertebral Displacement"
+      },
+      "neurological-rehab": {
+        "title": "Neurological Rehab",
+        "stroke": "Stroke",
+        "peripheral-nerve-injuries": "Peripheral Nerve Injuries",
+        "spinal-cord-injuries": "Spinal Cord Injuries",
+        "multiple-sclerosis": "Multiple Sclerosis (MS)"
+      },
+      "sports-injuries": {
+        "title": "Sports Injuries",
+        "ACL-injuries": "ACL Injuries",
+        "ankle-sprain": "Ankle Sprain",
+        "achilles-tendon": "Achilles Tendon",
+        "muscle-injuries": "Muscle Injuries"
+      },
+      "joints-pain": {
+        "title": "Joints Pain"
+      },
+      "post-surgery-rehab": {
+        "title": "Post-surgery Rehab"
+      }
+    }
+  }
+}

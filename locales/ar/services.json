@@ -1,0 +1,38 @@
+{
+  "services": {
+    "title": "خدماتنا",
+    "description": "خدمات علاج طبيعي شاملة مع أكثر من 20 عاماً من الخبرة",
+    "list": {
+      "spine-back-pain": {
+        "title": "إصابات وآلام العمود الفقري",
+        "scoliosis": "الجنف أو تقوس الظهر",
+        "disc-herniation": "الانزلاق الغضروفي",
+        "sciatica": "عرق النسا",
+        "spinal-muscle-imbalance": "عدم توازن عضلات العمود الفقري",
+        "kyphosis": "الأتب أو انحناء الظهر",
+        "vertebral-roughness": "خشونة الفقرات",
+        "vertebral-displacement": "زحزحة الفقرات"
+      },
+      "neurological-rehab": {
+        "title": "تأهيل حالات الأعصاب",
+        "stroke": "الجلطات",
+        "peripheral-nerve-injuries": "إصابات الأعصاب الطرفية",
+        "spinal-cord-injuries": "إصابات الحبل الشوكي",
+        "multiple-sclerosis": "التصلب المتعدد"
+      },
+      "sports-injuries": {
+        "title": "إصابات الملاعب",
+        "ACL-injuries": "الرباط الصليبي",
+        "ankle-sprain": "التواء الكاحل",
+        "achilles-tendon": "وتر أكيليس",
+        "muscle-injuries": "الإصابات العضلية"
+      },
+      "joints-pain": {
+        "title": "آلام المفاصل"
+      },
+      "post-surgery-rehab": {
+        "title": "تأهيل ما بعد جراحات العظام"
+      }
+    }
+  }
+}

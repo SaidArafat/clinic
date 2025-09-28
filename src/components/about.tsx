@@ -6,7 +6,7 @@ export function About() {
   const { t } = useTranslation()
 
   return (
-    <section id="about">
+    <section id="about" className="py-5">
       <section className="grid gap-10 md:grid-cols-2 md:items-center">
         <main className="flex flex-col text-center md:text-start">
           <header>
