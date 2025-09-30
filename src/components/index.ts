@@ -1,0 +1,8 @@
+export { Header } from './header'
+export { Hero } from './hero'
+export { About } from './about'
+export { Services } from './services'
+export { Reviews } from './reviews'
+export { Contact } from './contact'
+export { Footer } from './footer'
+export { WhatsAppFloat } from './whatsapp-float'
