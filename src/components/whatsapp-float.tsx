@@ -51,7 +51,7 @@ export function WhatsAppFloat() {
       <div className="fixed bottom-6 end-6 z-50">
         {/* Location Selection Popup */}
         {isOpen && (
-          <div className="mb-4 w-80 max-w-[calc(100vw-3rem)]">
+          <div className="mb-4 w-96 max-w-[calc(100vw-3rem)]">
             <Card className="shadow-2xl border-2 border-green-200 dark:border-green-800">
               <CardHeader className="pb-3">
                 <div className="flex items-center justify-between">
@@ -90,7 +90,7 @@ export function WhatsAppFloat() {
                             </h3>
                             {location.priority === 1 && (
                               <span className="bg-primary text-primary-foreground text-xs px-2 py-0.5 rounded-full">
-                                Main
+                                {t('mainBranch')}
                               </span>
                             )}
                           </div>

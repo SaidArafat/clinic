@@ -17,7 +17,7 @@ export function Contact() {
       id: 'zayed',
       name: t('locationZayed'),
       priority: 1,
-      address: 'Sheikh Zayed City, Giza Governorate',
+      address: t('zayedAddress'),
       phone: '+20 120 123 4567',
       whatsapp: '+20 120 123 4567',
       hours: {
@@ -86,8 +86,8 @@ export function Contact() {
                 className="relative overflow-hidden hover:shadow-lg transition-shadow"
               >
                 {location.priority === 1 && (
-                  <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium z-10">
-                    Main Branch
+                  <div className="absolute top-4 end-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium z-10">
+                    {t('mainBranch')}
                   </div>
                 )}
 
@@ -131,7 +131,9 @@ export function Contact() {
 
                   {/* Features */}
                   <div>
-                    <div className="font-medium mb-3">Clinic Features:</div>
+                    <div className="font-medium mb-3">
+                      {t('clinicFeatures')}:
+                    </div>
                     <div className="grid grid-cols-2 gap-2">
                       {location.features.map((feature, index) => (
                         <div
@@ -153,7 +155,7 @@ export function Contact() {
                       className="flex items-center space-x-2"
                     >
                       <Navigation className="w-4 h-4" />
-                      <span>Directions</span>
+                      <span>{t('directions')}</span>
                     </Button>
 
                     <Button
@@ -161,7 +163,7 @@ export function Contact() {
                       className="flex items-center space-x-2"
                     >
                       <Phone className="w-4 h-4" />
-                      <span>Call Now</span>
+                      <span>{t('callNow')}</span>
                     </Button>
                   </div>
 
@@ -174,10 +176,10 @@ export function Contact() {
                       <div className="text-center group-hover:scale-105 transition-transform">
                         <MapPin className="w-12 h-12 text-primary mx-auto mb-2" />
                         <div className="font-medium text-foreground">
-                          View on Google Maps
+                          {t('viewOnGoogleMaps')}
                         </div>
                         <div className="text-sm text-muted-foreground">
-                          Click to open directions
+                          {t('clickToOpenDirections')}
                         </div>
                       </div>
                     </div>
@@ -210,7 +212,7 @@ export function Contact() {
               size="lg"
               onClick={() => callPhone('+20 100 123 4567')}
             >
-              <Phone className="mr-2 h-5 w-5" />
+              <Phone className="me-2 h-5 w-5" />
               Emergency Contact
             </Button>
           </CardContent>

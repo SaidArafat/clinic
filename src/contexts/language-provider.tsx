@@ -78,6 +78,13 @@ const translations = {
     branch6Oct: '6th October Branch',
     branchZayed: 'Sheikh Zayed Branch',
     address6Oct: 'Cairo Medical Center, after Najda Square, Central Axis',
+    mainBranch: 'Main Branch',
+    directions: 'Directions',
+    callNow: 'Call Now',
+    viewOnGoogleMaps: 'View on Google Maps',
+    clickToOpenDirections: 'Click to open directions',
+    clinicFeatures: 'Clinic Features',
+    zayedAddress: 'Sheikh Zayed City, Giza Governorate',
 
     // Footer
     consultantPhysio: 'Consultant Physiotherapist',
@@ -177,6 +184,13 @@ const translations = {
     branch6Oct: 'فرع 6 أكتوبر',
     branchZayed: 'فرع الشيخ زايد',
     address6Oct: 'كايرو ميديكال سنتر، بعد ميدان النجدة، المحور المركزي',
+    mainBranch: 'الفرع الرئيسي',
+    directions: 'الاتجاهات',
+    callNow: 'اتصل الآن',
+    viewOnGoogleMaps: 'عرض على خرائط جوجل',
+    clickToOpenDirections: 'انقر لفتح الاتجاهات',
+    clinicFeatures: 'مميزات العيادة',
+    zayedAddress: 'مدينة الشيخ زايد، الجيزة',
 
     // Footer
     consultantPhysio: 'استشاري العلاج الطبيعي',
