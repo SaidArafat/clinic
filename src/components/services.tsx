@@ -1,9 +1,9 @@
-import { useLanguage } from '@/contexts/language-provider'
+import { useLanguage } from '@/contexts'
 import { ChevronRight, Play, Star } from 'lucide-react'
 import { useState } from 'react'
 import { ImageWithFallback } from './fallback-images/image-with-fallback'
-import { Button } from './ui/button'
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 export function Services() {
   const { t } = useLanguage()
@@ -185,9 +185,9 @@ export function Services() {
               {services[activeService].hasVideo && (
                 <div className="absolute inset-0 bg-black/30 flex items-center justify-center group cursor-pointer">
                   <div className="bg-white/90 dark:bg-black/90 rounded-full p-6 shadow-lg transform group-hover:scale-110 transition-transform">
-                    <Play className="w-8 h-8 text-primary ml-1" />
+                    <Play className="w-8 h-8 text-primary ms-1" />
                   </div>
-                  <div className="absolute bottom-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
+                  <div className="absolute bottom-4 end-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
                     Treatment Video
                   </div>
                 </div>
@@ -288,7 +288,7 @@ export function Services() {
               className="w-full md:w-auto px-8 py-6 text-lg h-auto"
             >
               Book Consultation
-              <ChevronRight className="ml-2 h-5 w-5" />
+              <ChevronRight className="ms-2 h-5 w-5" />
             </Button>
           </div>
         </div>

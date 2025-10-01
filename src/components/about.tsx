@@ -1,6 +1,6 @@
-import { useLanguage } from '@/contexts/language-provider'
+import { useLanguage } from '@/contexts'
 import { Award, CheckCircle, Clock, Users } from 'lucide-react'
-import { ImageWithFallback } from './fallback-images/image-with-fallback'
+import { ImageWithFallback } from '@/components/fallback-images/image-with-fallback'
 
 export function About() {
   const { t } = useLanguage()

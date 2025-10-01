@@ -9,8 +9,7 @@ import {
   WhatsAppFloat
 } from '@/components'
 import { Toaster } from '@/components/ui/sonner'
-import { LanguageProvider } from './contexts/language-provider'
-import { ThemeProvider } from './contexts/theme-provider'
+import { LanguageProvider, ThemeProvider } from '@/contexts'
 
 export default function App() {
   return (

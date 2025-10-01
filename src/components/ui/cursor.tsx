@@ -4,11 +4,11 @@ import {
   CursorFollow,
   CursorProvider
 } from '@/components/ui/shadcn-io/animated-cursor'
+import { useLanguage } from '@/contexts'
 import type { ReactNode } from 'react'
-import { useTranslation } from 'react-i18next'
 
 export const Cursor = ({ children }: { children: ReactNode }) => {
-  const { t } = useTranslation()
+  const { t } = useLanguage()
 
   return (
     <>
@@ -16,7 +16,7 @@ export const Cursor = ({ children }: { children: ReactNode }) => {
       <CursorProvider>
         <CursorFollow>
           <div className="bg-blue-500 text-white px-2 py-1 rounded-lg text-sm shadow-lg">
-            {t('owner')}
+            {t('heroTitle')}
           </div>
         </CursorFollow>
       </CursorProvider>

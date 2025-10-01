@@ -1,4 +1,4 @@
-import { useLanguage } from '@/contexts/language-provider'
+import { useLanguage } from '@/contexts'
 import { Clock, MapPin, Navigation, Phone } from 'lucide-react'
 import { Button } from './ui/button'
 import {

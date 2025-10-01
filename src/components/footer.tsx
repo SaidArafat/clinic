@@ -1,4 +1,4 @@
-import { useLanguage } from '@/contexts/language-provider'
+import { useLanguage } from '@/contexts'
 import {
   Clock,
   Facebook,
@@ -169,7 +169,7 @@ export function Footer() {
         {/* Bottom Section */}
         <div className="border-t border-border mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-sm text-muted-foreground text-center md:text-left">
+            <p className="text-sm text-muted-foreground text-center md:text-start">
               {t('copyright')}
             </p>
 

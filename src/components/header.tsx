@@ -1,7 +1,6 @@
+import { useLanguage, useTheme } from '@/contexts'
+import { Languages, Menu, Moon, Sun, X } from 'lucide-react'
 import { useState } from 'react'
-import { Menu, X, Sun, Moon, Languages } from 'lucide-react'
-import { useLanguage } from '@/contexts/language-provider'
-import { useTheme } from '@/contexts/theme-provider'
 import { Button } from './ui/button'
 
 export function Header() {
@@ -26,7 +25,7 @@ export function Header() {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
+    <header className="fixed top-0 start-0 end-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
@@ -102,7 +101,7 @@ export function Header() {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-muted-foreground hover:text-primary hover:bg-accent transition-colors duration-200"
+                  className="block w-full text-start px-3 py-2 rounded-md text-base font-medium text-muted-foreground hover:text-primary hover:bg-accent transition-colors duration-200"
                 >
                   {item.name}
                 </button>

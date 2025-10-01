@@ -1,5 +1,5 @@
 import { Play, ArrowDown } from 'lucide-react'
-import { useLanguage } from '@/contexts/language-provider'
+import { useLanguage } from '@/contexts'
 import { Button } from './ui/button'
 import { ImageWithFallback } from './fallback-images/image-with-fallback'
 
@@ -34,10 +34,10 @@ export function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
-          <div className="text-center lg:text-left space-y-8">
+          <div className="text-center lg:text-start space-y-8">
             <div className="space-y-4">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-                <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
+                <span className="w-2 h-2 bg-green-500 rounded-full me-2 animate-pulse"></span>
                 {t('consultantPhysiotherapist')}
               </div>
 
@@ -58,7 +58,7 @@ export function Hero() {
                 className="px-8 py-6 text-lg h-auto"
               >
                 {t('contactUs')}
-                <ArrowDown className="ml-2 h-5 w-5" />
+                <ArrowDown className="ms-2 h-5 w-5" />
               </Button>
 
               <Button
@@ -67,7 +67,7 @@ export function Hero() {
                 size="lg"
                 className="px-8 py-6 text-lg h-auto"
               >
-                <Play className="mr-2 h-5 w-5" />
+                <Play className="me-2 h-5 w-5" />
                 {t('ourMainServices')}
               </Button>
             </div>
@@ -115,13 +115,13 @@ export function Hero() {
                 {/* Video play overlay */}
                 <div className="absolute inset-0 flex items-center justify-center bg-black/20 rounded-xl opacity-0 hover:opacity-100 transition-opacity cursor-pointer">
                   <div className="bg-white/90 dark:bg-black/90 rounded-full p-4 shadow-lg transform hover:scale-110 transition-transform">
-                    <Play className="w-8 h-8 text-primary ml-1" />
+                    <Play className="w-8 h-8 text-primary ms-1" />
                   </div>
                 </div>
               </div>
 
               {/* Experience badge */}
-              <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground rounded-2xl p-4 shadow-lg">
+              <div className="absolute -bottom-4 -end-4 bg-primary text-primary-foreground rounded-2xl p-4 shadow-lg">
                 <div className="text-2xl font-bold">20+</div>
                 <div className="text-sm">Years</div>
               </div>
@@ -131,7 +131,7 @@ export function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 start-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-muted-foreground rounded-full flex justify-center">
           <div className="w-1 h-3 bg-muted-foreground rounded-full mt-2 animate-pulse"></div>
         </div>

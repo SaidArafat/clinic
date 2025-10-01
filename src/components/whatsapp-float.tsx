@@ -1,8 +1,10 @@
+'use client'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { useLanguage } from '@/contexts'
+import { cn } from '@/lib/utils'
+import { MapPin, MessageCircle, X } from 'lucide-react'
 import { useState } from 'react'
-import { MessageCircle, X, MapPin } from 'lucide-react'
-import { useLanguage } from '@/contexts/language-provider'
-import { Button } from './ui/button'
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
 
 export function WhatsAppFloat() {
   const [isOpen, setIsOpen] = useState(false)
@@ -46,7 +48,7 @@ export function WhatsAppFloat() {
       )}
 
       {/* WhatsApp Float Button */}
-      <div className="fixed bottom-6 right-6 z-50">
+      <div className="fixed bottom-6 end-6 z-50">
         {/* Location Selection Popup */}
         {isOpen && (
           <div className="mb-4 w-80 max-w-[calc(100vw-3rem)]">
@@ -140,9 +142,10 @@ export function WhatsAppFloat() {
         {/* Main WhatsApp Button */}
         <Button
           onClick={() => setIsOpen(!isOpen)}
-          className={`w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg transition-all duration-300 ${
+          className={cn(
+            'w-14 h-14 z-50 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg transition-all duration-300',
             isOpen ? 'rotate-180 bg-green-600' : 'hover:scale-110'
-          }`}
+          )}
           size="sm"
         >
           {isOpen ? (
@@ -154,13 +157,13 @@ export function WhatsAppFloat() {
 
         {/* Pulse animation when closed */}
         {!isOpen && (
-          <div className="absolute inset-0 rounded-full bg-green-500 animate-ping opacity-75"></div>
+          <div className="absolute inset-0 rounded-full bg-green-500 animate-ping opacity-75 -z-50"></div>
         )}
       </div>
 
       {/* Mobile bottom notification */}
       {!isOpen && (
-        <div className="fixed bottom-24 right-6 md:hidden">
+        <div className="fixed bottom-24 end-6 md:hidden">
           <div className="bg-green-500 text-white text-xs px-3 py-1 rounded-full shadow-lg animate-bounce">
             WhatsApp
           </div>

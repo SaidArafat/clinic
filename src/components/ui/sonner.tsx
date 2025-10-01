@@ -1,5 +1,5 @@
 'use client'
-import { useTheme } from '@/contexts/theme-provider'
+import { useTheme } from '@/contexts'
 import { Toaster as Sonner, type ToasterProps } from 'sonner'
 
 const Toaster = ({ ...props }: ToasterProps) => {

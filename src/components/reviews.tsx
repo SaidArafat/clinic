@@ -1,19 +1,19 @@
-import { useLanguage } from '@/contexts/language-provider'
+import { useLanguage } from '@/contexts'
 import { ChevronLeft, ChevronRight, Plus, Star, User } from 'lucide-react'
 import { useState } from 'react'
 import { toast } from 'sonner'
-import { Button } from './ui/button'
-import { Card, CardContent } from './ui/card'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogTrigger
-} from './ui/dialog'
-import { Input } from './ui/input'
-import { Label } from './ui/label'
-import { Textarea } from './ui/textarea'
+} from '@/components/ui/dialog'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
+import { Textarea } from '@/components/ui/textarea'
 
 interface Review {
   id: number
@@ -167,7 +167,7 @@ export function Reviews() {
           <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
             <DialogTrigger asChild>
               <Button size="lg" className="px-8 py-6 text-lg h-auto">
-                <Plus className="mr-2 h-5 w-5" />
+                <Plus className="me-2 h-5 w-5" />
                 {t('addFeedback')}
               </Button>
             </DialogTrigger>
@@ -260,7 +260,7 @@ export function Reviews() {
                       <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
                         <User className="w-6 h-6 text-primary" />
                       </div>
-                      <div className="text-left">
+                      <div className="text-start">
                         <div className="font-semibold text-foreground flex items-center space-x-2">
                           <span>{reviews[currentReview].name}</span>
                           {reviews[currentReview].verified && (
@@ -290,7 +290,7 @@ export function Reviews() {
             variant="outline"
             size="sm"
             onClick={prevReview}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 p-0 rounded-full"
+            className="absolute start-4 top-1/2 transform -translate-y-1/2 w-10 h-10 p-0 rounded-full"
           >
             <ChevronLeft className="w-4 h-4" />
           </Button>
@@ -299,7 +299,7 @@ export function Reviews() {
             variant="outline"
             size="sm"
             onClick={nextReview}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 p-0 rounded-full"
+            className="absolute end-4 top-1/2 transform -translate-y-1/2 w-10 h-10 p-0 rounded-full"
           >
             <ChevronRight className="w-4 h-4" />
           </Button>
