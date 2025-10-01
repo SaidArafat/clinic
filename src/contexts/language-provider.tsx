@@ -86,7 +86,7 @@ const translations = {
     quickLinks: 'Quick Links',
     followUs: 'Follow Us',
     ourSpecializations: 'Our Specializations',
-    copyright: '© 2025 Dr. Ashraf Kotob Physio Clinic. All rights reserved.',
+    copyright: 'Dr. Ashraf Kotob Physio Clinic. All rights reserved.',
 
     // WhatsApp
     contactViaWhatsApp: 'Contact via WhatsApp',
@@ -185,8 +185,7 @@ const translations = {
     quickLinks: 'روابط سريعة',
     followUs: 'تابعنا',
     ourSpecializations: 'تخصصاتنا',
-    copyright:
-      '© 2025 عيادة الدكتور أشرف قطب للعلاج الطبيعي. جميع الحقوق محفوظة.',
+    copyright: 'عيادة الدكتور أشرف قطب للعلاج الطبيعي. جميع الحقوق محفوظة.',
 
     // WhatsApp
     contactViaWhatsApp: 'تواصل عبر الواتساب',
