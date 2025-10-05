@@ -1,5 +1,5 @@
 import { useLanguage } from '@/contexts'
-import { Clock, MapPin, Navigation, Phone } from 'lucide-react'
+import { Check, Clock, MapPin, Navigation, Phone } from 'lucide-react'
 import { Button } from './ui/button'
 import {
   Card,
@@ -18,14 +18,14 @@ export function Contact() {
       name: t('locationZayed'),
       priority: 1,
       address: t('zayedAddress'),
-      phone: '+20 120 123 4567',
-      whatsapp: '+20 120 123 4567',
+      phone: '+20 106 949 4211',
+      whatsapp: '+20 106 949 4211',
       hours: {
         weekdays: t('workingHoursWeekdays'),
         friday: t('workingHoursFriday')
       },
       coordinates: { lat: 30.0444, lng: 30.97 },
-      mapUrl: 'https://maps.google.com/?q=Sheikh+Zayed+City+Physiotherapy',
+      mapUrl: 'https://maps.app.goo.gl/TGc5hpngHSoH26Wp8',
       features: [
         'German Certified Equipment',
         'Manual Therapy',
@@ -38,14 +38,14 @@ export function Contact() {
       name: t('location6Oct'),
       priority: 2,
       address: t('address6Oct'),
-      phone: '+20 120 987 6543',
-      whatsapp: '+20 120 987 6543',
+      phone: '+20 100 800 9763',
+      whatsapp: '+20 100 800 9763',
       hours: {
         weekdays: t('workingHoursWeekdays'),
         friday: t('workingHoursFriday')
       },
       coordinates: { lat: 29.9097, lng: 30.9746 },
-      mapUrl: 'https://maps.google.com/?q=6th+October+Cairo+Medical+Center',
+      mapUrl: 'https://maps.app.goo.gl/8sijaUFwADjkcgRb6',
       features: [
         'Full Medical Center',
         'Neurological Rehab',
@@ -62,6 +62,13 @@ export function Contact() {
   const callPhone = (phone: string) => {
     window.open(`tel:${phone}`)
   }
+
+  const additionalInfo = [
+    'insuranceAccepted',
+    'homeVisitsAvailable',
+    'followUpPrograms',
+    'multilingualService'
+  ]
 
   return (
     <section id="contact" className="py-20 bg-background">
@@ -109,6 +116,7 @@ export function Contact() {
                         <button
                           onClick={() => callPhone(location.phone)}
                           className="text-primary hover:underline"
+                          dir="ltr"
                         >
                           {location.phone}
                         </button>
@@ -161,6 +169,7 @@ export function Contact() {
                     <Button
                       onClick={() => callPhone(location.phone)}
                       className="flex items-center space-x-2"
+                      dir="ltr"
                     >
                       <Phone className="w-4 h-4" />
                       <span>{t('callNow')}</span>
@@ -194,26 +203,24 @@ export function Contact() {
         <Card className="max-w-2xl mx-auto bg-primary/5 border-primary/20">
           <CardHeader className="text-center">
             <CardTitle className="text-primary">
-              Emergency Consultations
+              {t('emergencyConsultations')}
             </CardTitle>
-            <CardDescription>
-              For urgent physiotherapy needs outside regular hours
-            </CardDescription>
+            <CardDescription>{t('emergencyDescription')}</CardDescription>
           </CardHeader>
           <CardContent className="text-center space-y-4">
-            <div className="text-2xl font-bold text-foreground">
-              +20 100 123 4567
+            <div className="text-2xl font-bold text-foreground" dir="ltr">
+              +20 100 800 9763
             </div>
             <div className="text-sm text-muted-foreground">
-              Available for emergency consultations and home visits
+              {t('emergencyAvailable')}
             </div>
             <Button
               variant="outline"
               size="lg"
-              onClick={() => callPhone('+20 100 123 4567')}
+              onClick={() => callPhone('+20 100 800 9763')}
             >
               <Phone className="me-2 h-5 w-5" />
-              Emergency Contact
+              {t('emergencyContact')}
             </Button>
           </CardContent>
         </Card>
@@ -221,18 +228,19 @@ export function Contact() {
         {/* Additional Info */}
         <div className="text-center mt-12 p-6 bg-muted/50 rounded-lg">
           <h3 className="font-bold text-foreground mb-2">
-            Booking Information
+            {t('bookingTitle')}
           </h3>
           <p className="text-muted-foreground mb-4">
-            Appointments can be booked via phone or WhatsApp. Home visits
-            available within Cairo and Giza.
+            {t('bookingDescription')}
           </p>
-          <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
-            <span>✓ Insurance Accepted</span>
-            <span>✓ Home Visits Available</span>
-            <span>✓ Follow-up Programs</span>
-            <span>✓ Multilingual Service</span>
-          </div>
+          <ul className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
+            {additionalInfo.map(item => (
+              <li key={item} className="flex items-center gap-1">
+                <Check className="w-4 h-4 text-green-500" />
+                {t(item)}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

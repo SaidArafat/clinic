@@ -87,6 +87,18 @@ const translations = {
     clickToOpenDirections: 'Click to open directions',
     clinicFeatures: 'Clinic Features',
     zayedAddress: 'Sheikh Zayed City, Giza Governorate',
+    emergencyConsultations: 'Emergency Consultations',
+    emergencyDescription:
+      'For urgent physiotherapy needs outside regular hours',
+    emergencyAvailable: 'Available for emergency consultations and home visits',
+    emergencyContact: 'Emergency Contact',
+    bookingTitle: 'Booking Information',
+    bookingDescription:
+      'Appointments can be booked via phone or WhatsApp. Home visits available within Cairo and Giza.',
+    insuranceAccepted: 'Insurance Accepted',
+    homeVisitsAvailable: 'Home Visits Available',
+    followUpPrograms: 'Follow-up Programs',
+    multilingualService: 'Multilingual Service',
 
     // Footer
     consultantPhysio: 'Consultant Physiotherapist',
@@ -198,6 +210,18 @@ const translations = {
     clickToOpenDirections: 'انقر لفتح الاتجاهات',
     clinicFeatures: 'مميزات العيادة',
     zayedAddress: 'مدينة الشيخ زايد، الجيزة',
+    emergencyConsultations: 'استشارات طارئة',
+    emergencyDescription:
+      'للحالات العاجلة في العلاج الطبيعي خارج أوقات العمل الرسمية',
+    emergencyAvailable: 'متاح للاستشارات الطارئة والزيارات المنزلية',
+    emergencyContact: 'جهة الاتصال في الحالات الطارئة',
+    bookingTitle: 'معلومات الحجز',
+    bookingDescription:
+      'يمكن حجز المواعيد عبر الهاتف أو الواتساب. الزيارات المنزلية متاحة داخل القاهرة والجيزة.',
+    insuranceAccepted: 'نقبل التأمين',
+    homeVisitsAvailable: 'زيارات منزلية متاحة',
+    followUpPrograms: 'برامج متابعة',
+    multilingualService: 'خدمة بعدة لغات',
 
     // Footer
     consultantPhysio: 'استشاري العلاج الطبيعي',
