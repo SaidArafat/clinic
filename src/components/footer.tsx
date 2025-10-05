@@ -1,8 +1,12 @@
 import { useLanguage } from '@/contexts'
 import {
+  Check,
   Clock,
   Copyright,
   Facebook,
+  Globe,
+  HandHeart,
+  House,
   Instagram,
   Linkedin,
   Mail,
@@ -176,10 +180,22 @@ export function Footer() {
             </p>
 
             <div className="flex flex-wrap justify-center md:justify-end gap-4 text-sm text-muted-foreground">
-              <span>📧 Consultations Available</span>
-              <span>🏠 Home Visits</span>
-              <span>🌍 Arabic & English</span>
-              <span>💳 Insurance Accepted</span>
+              <span className="flex items-center gap-1">
+                <Check className="w-4 h-4" strokeWidth={2.5} />
+                {t('consultationsAvailable')}
+              </span>
+              <span className="flex items-center gap-1">
+                <House className="w-4 h-4" strokeWidth={2} />
+                {t('homeVisits')}
+              </span>
+              <span className="flex items-center gap-1">
+                <Globe className="w-4 h-4" strokeWidth={1.5} />
+                {t('arabicEnglish')}
+              </span>
+              <span className="flex items-center gap-1">
+                <HandHeart className="w-5 h-5" strokeWidth={1.5} />
+                {t('insuranceAccepted')}
+              </span>
             </div>
           </div>
         </div>

@@ -108,6 +108,9 @@ const translations = {
     followUs: 'Follow Us',
     ourSpecializations: 'Our Specializations',
     copyright: 'Dr. Ashraf Kotob Physio Clinic. All rights reserved.',
+    consultationsAvailable: 'Consultations Available',
+    homeVisits: 'Home Visits',
+    arabicEnglish: 'Arabic & English',
 
     // WhatsApp
     contactViaWhatsApp: 'Contact via WhatsApp',
@@ -231,6 +234,9 @@ const translations = {
     followUs: 'تابعنا',
     ourSpecializations: 'تخصصاتنا',
     copyright: 'عيادة الدكتور أشرف قطب للعلاج الطبيعي. جميع الحقوق محفوظة.',
+    consultationsAvailable: 'استشارات متاحة',
+    homeVisits: 'زيارات منزلية',
+    arabicEnglish: 'العربية والإنجليزية',
 
     // WhatsApp
     contactViaWhatsApp: 'تواصل عبر الواتساب',
