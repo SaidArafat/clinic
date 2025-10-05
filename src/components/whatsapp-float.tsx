@@ -15,14 +15,14 @@ export function WhatsAppFloat() {
     {
       id: 'zayed',
       name: t('sheikhZayedClinic'),
-      phone: '+201201234567',
+      phone: '+201069494211',
       address: 'Sheikh Zayed City, Giza',
       priority: 1
     },
     {
       id: 'october',
       name: t('sixthOctoberClinic'),
-      phone: '+201209876543',
+      phone: '+201008009763',
       address: '6th October - Cairo Medical Center',
       priority: 2
     }
