@@ -28,7 +28,7 @@ const translations = {
     heroTitle: 'Dr. Ashraf Kotob',
     heroSubtitle: 'Consultant Physiotherapist',
     heroDescription:
-      '20+ Years of Experience in Spine, Joints & Rehabilitation',
+      '25+ Years of Experience in Spine, Joints & Rehabilitation',
     contactUs: 'Contact Us',
     ourMainServices: 'Our Main Services',
     spineService: 'Spine & Back Pain',
@@ -37,12 +37,13 @@ const translations = {
     jointsService: 'Joints Pain',
     surgeryService: 'Post-surgery Rehab',
     learnMore: 'Learn More',
+    years: 'Years',
 
     // About
     aboutDrAshraf: 'About Dr. Ashraf',
     consultantPhysiotherapist: 'Consultant Physiotherapist',
     aboutDescription:
-      'Dr. Ashraf Kotob is a highly experienced consultant physiotherapist with over 20 years of dedicated practice in the field of rehabilitation and manual therapy. His expertise spans across spine rehabilitation, neurological conditions, sports injuries, and post-surgical recovery.',
+      'Dr. Ashraf Kotob is a highly experienced consultant physiotherapist with over 25 years of dedicated practice in the field of rehabilitation and manual therapy. His expertise spans across spine rehabilitation, neurological conditions, sports injuries, and post-surgical recovery.',
     keyQualifications: 'Key Qualifications:',
     qualification1: 'Advanced Manual Therapy Consultant',
     qualification2: 'German Certification in Spine Mechanics',
@@ -56,7 +57,8 @@ const translations = {
     // Services
     ourServices: 'Our Services',
     servicesDescription:
-      'Comprehensive physiotherapy services with over 20 years of experience',
+      'Comprehensive physiotherapy services with over 25 years of experience',
+    bookConsultation: 'Book Consultation',
 
     // Reviews
     patientReviews: 'Patient Reviews',
@@ -101,6 +103,9 @@ const translations = {
     sheikhZayedClinic: 'Sheikh Zayed Clinic',
     sixthOctoberClinic: '6th October Clinic',
     clickToStart: 'Click to start a WhatsApp conversation',
+    quickActions: 'Quick Actions',
+    bookAppointment: 'Book Appointment',
+    askPrices: 'Ask Prices',
 
     // Service categories
     spineConditions: 'Spine Disorders',
@@ -135,7 +140,7 @@ const translations = {
     heroTitle: 'د. أشرف قطب',
     heroSubtitle: 'استشاري العلاج الطبيعي',
     heroDescription:
-      'أكثر من 20 عاماً من الخبرة في علاج العمود الفقري والمفاصل والتأهيل',
+      'أكثر من 25 عاماً من الخبرة في علاج العمود الفقري والمفاصل والتأهيل',
     contactUs: 'اتصل بنا',
     ourMainServices: 'خدماتنا الرئيسية',
     spineService: 'إصابات وآلام العمود الفقري',
@@ -144,12 +149,13 @@ const translations = {
     jointsService: 'آلام المفاصل',
     surgeryService: 'تأهيل ما بعد الجراحات',
     learnMore: 'اعرف المزيد',
+    years: 'عاماً',
 
     // About
     aboutDrAshraf: 'عن الدكتور أشرف',
     consultantPhysiotherapist: 'استشاري العلاج الطبيعي',
     aboutDescription:
-      'الدكتور أشرف قطب هو استشاري علاج طبيعي ذو خبرة واسعة تمتد لأكثر من 20 عاماً في مجال التأهيل والعلاج اليدوي. تشمل خبرته تأهيل العمود الفقري، والحالات العصبية، وإصابات الملاعب، والتعافي بعد العمليات الجراحية.',
+      'الدكتور أشرف قطب هو استشاري علاج طبيعي ذو خبرة واسعة تمتد لأكثر من 25 عاماً في مجال التأهيل والعلاج اليدوي. تشمل خبرته تأهيل العمود الفقري، والحالات العصبية، وإصابات الملاعب، والتعافي بعد العمليات الجراحية.',
     keyQualifications: 'المؤهلات الرئيسية:',
     qualification1: 'استشاري علاج يدوي متقدم',
     qualification2: 'شهادات ألمانية في ميكانيكا العمود الفقري',
@@ -162,7 +168,8 @@ const translations = {
 
     // Services
     ourServices: 'خدماتنا',
-    servicesDescription: 'خدمات علاج طبيعي شاملة مع أكثر من 20 عاماً من الخبرة',
+    servicesDescription: 'خدمات علاج طبيعي شاملة مع أكثر من 25 عاماً من الخبرة',
+    bookConsultation: 'احجز استشارة',
 
     // Reviews
     patientReviews: 'آراء المرضى',
@@ -207,6 +214,9 @@ const translations = {
     sheikhZayedClinic: 'عيادة الشيخ زايد',
     sixthOctoberClinic: 'عيادة 6 أكتوبر',
     clickToStart: 'انقر لبدء محادثة واتساب',
+    quickActions: 'إجراءات سريعة',
+    bookAppointment: 'احجز موعد',
+    askPrices: 'اسأل عن الأسعار',
 
     // Service categories
     spineConditions: 'إصابات وآلام العمود الفقري',

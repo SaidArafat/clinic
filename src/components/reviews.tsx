@@ -1,12 +1,9 @@
-import { useLanguage } from '@/contexts'
-import { ChevronLeft, ChevronRight, Plus, Star, User } from 'lucide-react'
-import { useState } from 'react'
-import { toast } from 'sonner'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import {
   Dialog,
   DialogContent,
+  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger
@@ -14,6 +11,10 @@ import {
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
+import { useLanguage } from '@/contexts'
+import { ChevronLeft, ChevronRight, Plus, Star, User } from 'lucide-react'
+import { useState } from 'react'
+import { toast } from 'sonner'
 
 interface Review {
   id: number
@@ -155,7 +156,7 @@ export function Reviews() {
     <section id="reviews" className="py-20 bg-secondary/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             {t('patientReviews')}
           </h2>
@@ -174,6 +175,7 @@ export function Reviews() {
             <DialogContent className="sm:max-w-md">
               <DialogHeader>
                 <DialogTitle>{t('addFeedback')}</DialogTitle>
+                <DialogDescription></DialogDescription>
               </DialogHeader>
               <form onSubmit={handleSubmitReview} className="space-y-4">
                 <div>
@@ -319,7 +321,7 @@ export function Reviews() {
         </div>
 
         {/* Overall Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
           <div className="text-center p-6 bg-card rounded-lg border border-border">
             <div className="text-3xl font-bold text-foreground">4.9/5</div>
             <div className="text-sm text-muted-foreground">Average Rating</div>

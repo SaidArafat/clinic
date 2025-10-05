@@ -89,7 +89,7 @@ export function WhatsAppFloat() {
                               {location.name}
                             </h3>
                             {location.priority === 1 && (
-                              <span className="bg-primary text-primary-foreground text-xs px-2 py-0.5 rounded-full">
+                              <span className="bg-primary text-center text-primary-foreground text-xs px-2 py-0.5 rounded-full">
                                 {t('mainBranch')}
                               </span>
                             )}
@@ -109,7 +109,7 @@ export function WhatsAppFloat() {
                 {/* Quick Actions */}
                 <div className="pt-3 border-t border-border">
                   <div className="text-xs text-muted-foreground text-center mb-3">
-                    Quick Actions
+                    {t('quickActions')}
                   </div>
                   <div className="grid grid-cols-2 gap-2">
                     <Button
@@ -120,7 +120,7 @@ export function WhatsAppFloat() {
                       }
                       className="text-xs h-8"
                     >
-                      Book Appointment
+                      {t('bookAppointment')}
                     </Button>
                     <Button
                       variant="outline"
@@ -130,7 +130,7 @@ export function WhatsAppFloat() {
                       }
                       className="text-xs h-8"
                     >
-                      Ask Prices
+                      {t('askPrices')}
                     </Button>
                   </div>
                 </div>

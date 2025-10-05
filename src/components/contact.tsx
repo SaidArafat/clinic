@@ -67,7 +67,7 @@ export function Contact() {
     <section id="contact" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             {t('contactTitle')}
           </h2>
@@ -86,7 +86,7 @@ export function Contact() {
                 className="relative overflow-hidden hover:shadow-lg transition-shadow"
               >
                 {location.priority === 1 && (
-                  <div className="absolute top-4 end-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium z-10">
+                  <div className="absolute top-4 end-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-medium z-10">
                     {t('mainBranch')}
                   </div>
                 )}

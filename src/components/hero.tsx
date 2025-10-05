@@ -80,7 +80,7 @@ export function Hero() {
             </div>
 
             {/* Quick Services */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 pt-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {[
                 { name: t('spineService'), icon: spineService },
                 { name: t('neuroService'), icon: neuroService },
@@ -129,8 +129,8 @@ export function Hero() {
 
               {/* Experience badge */}
               <div className="absolute -bottom-4 -end-4 bg-primary text-primary-foreground rounded-2xl p-4 shadow-lg">
-                <div className="text-2xl font-bold">20+</div>
-                <div className="text-sm">Years</div>
+                <div className="text-2xl font-bold">25+</div>
+                <div className="text-sm">{t('years')}</div>
               </div>
             </div>
           </div>
