@@ -44,9 +44,9 @@ const translations = {
     aboutDescription:
       'Dr. Ashraf Kotob is a highly experienced consultant physiotherapist with over 20 years of dedicated practice in the field of rehabilitation and manual therapy. His expertise spans across spine rehabilitation, neurological conditions, sports injuries, and post-surgical recovery.',
     keyQualifications: 'Key Qualifications:',
-    qualification1: 'Advanced Manual Therapy Specialist',
+    qualification1: 'Advanced Manual Therapy Consultant',
     qualification2: 'German Certification in Spine Mechanics',
-    qualification3: '20+ Years Clinical Experience',
+    qualification3: '25+ Years Clinical Experience',
     qualification4: 'Neurological Rehabilitation Expert',
     qualification5: 'Sports Injury Rehabilitation',
     treatmentPhilosophy: 'Treatment Philosophy',
@@ -103,11 +103,11 @@ const translations = {
     clickToStart: 'Click to start a WhatsApp conversation',
 
     // Service categories
-    spineConditions: 'Spine & Back Pain',
+    spineConditions: 'Spine Disorders',
     neuroConditions: 'Neurological Rehabilitation',
+    surgeryConditions: 'Post Orthopedic Surgery',
     sportsConditions: 'Sports Injuries',
     jointsConditions: 'Joints Pain',
-    surgeryConditions: 'Post-surgery Orthopedic Rehab',
 
     // Feedback Form
     addFeedback: 'Add Your Feedback',
@@ -151,9 +151,9 @@ const translations = {
     aboutDescription:
       'الدكتور أشرف قطب هو استشاري علاج طبيعي ذو خبرة واسعة تمتد لأكثر من 20 عاماً في مجال التأهيل والعلاج اليدوي. تشمل خبرته تأهيل العمود الفقري، والحالات العصبية، وإصابات الملاعب، والتعافي بعد العمليات الجراحية.',
     keyQualifications: 'المؤهلات الرئيسية:',
-    qualification1: 'أخصائي علاج يدوي متقدم',
+    qualification1: 'استشاري علاج يدوي متقدم',
     qualification2: 'شهادات ألمانية في ميكانيكا العمود الفقري',
-    qualification3: 'خبرة سريرية أكثر من 20 عاماً',
+    qualification3: 'خبرة سريرية أكثر من 25 عاماً',
     qualification4: 'خبير تأهيل الأعصاب',
     qualification5: 'تأهيل الإصابات الرياضية',
     treatmentPhilosophy: 'فلسفة العلاج',

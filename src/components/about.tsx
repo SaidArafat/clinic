@@ -15,7 +15,7 @@ export function About() {
 
   const stats = [
     { icon: Users, value: '5000+', label: 'Happy Patients' },
-    { icon: Clock, value: '20+', label: 'Years Experience' },
+    { icon: Clock, value: '25+', label: 'Years Experience' },
     { icon: Award, value: '15+', label: 'Certifications' },
     { icon: CheckCircle, value: '95%', label: 'Success Rate' }
   ]

@@ -1,7 +1,14 @@
-import { Play, ArrowDown } from 'lucide-react'
 import { useLanguage } from '@/contexts'
-import { Button } from './ui/button'
+import {
+  jointsService,
+  neuroService,
+  spineService,
+  sportsService,
+  surgeryService
+} from '@/lib/icons'
+import { ArrowDown, Play } from 'lucide-react'
 import { ImageWithFallback } from './fallback-images/image-with-fallback'
+import { Button } from './ui/button'
 
 export function Hero() {
   const { t } = useLanguage()
@@ -73,23 +80,23 @@ export function Hero() {
             </div>
 
             {/* Quick Services */}
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 pt-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 pt-8">
               {[
-                { name: t('spineService'), icon: '🦴' },
-                { name: t('neuroService'), icon: '⚡' },
-                { name: t('sportsService'), icon: '⚽' },
-                { name: t('jointsService'), icon: '🦴' },
-                { name: t('surgeryService'), icon: '🏥' }
+                { name: t('spineService'), icon: spineService },
+                { name: t('neuroService'), icon: neuroService },
+                { name: t('sportsService'), icon: sportsService },
+                { name: t('jointsService'), icon: jointsService },
+                { name: t('surgeryService'), icon: surgeryService }
               ].map((service, index) => (
                 <div
                   key={index}
-                  className="p-4 rounded-lg border border-border bg-card hover:bg-accent transition-colors cursor-pointer group"
+                  className="p-4 flex flex-col justify-center items-center gap-4 text-center rounded-lg border border-border bg-card hover:bg-accent transition-colors cursor-pointer group"
                   onClick={scrollToServices}
                 >
-                  <div className="text-2xl mb-2 group-hover:scale-110 transition-transform">
-                    {service.icon}
+                  <div className="w-10 h-10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <img src={service.icon} alt={service.name} />
                   </div>
-                  <p className="text-sm font-medium text-card-foreground group-hover:text-accent-foreground">
+                  <p className="text-xs font-medium text-card-foreground group-hover:text-accent-foreground">
                     {service.name}
                   </p>
                 </div>

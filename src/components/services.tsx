@@ -1,19 +1,28 @@
-import { useLanguage } from '@/contexts'
-import { ChevronRight, Play, Star } from 'lucide-react'
-import { useState } from 'react'
-import { ImageWithFallback } from './fallback-images/image-with-fallback'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { useLanguage } from '@/contexts'
+import {
+  jointsService,
+  neuroService,
+  spineService,
+  sportsService,
+  surgeryService
+} from '@/lib/icons'
+import { cn } from '@/lib/utils'
+import { ChevronRight, Play, SquarePlay, Star } from 'lucide-react'
+import { useState } from 'react'
+import { ImageWithFallback } from './fallback-images/image-with-fallback'
 
 export function Services() {
-  const { t } = useLanguage()
   const [activeService, setActiveService] = useState(0)
+
+  const { language, t } = useLanguage()
 
   const services = [
     {
       id: 'spine',
       title: t('spineConditions'),
-      icon: '🦴',
+      icon: spineService,
       image:
         'https://images.unsplash.com/photo-1714929818299-914d3114bcec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcGluZSUyMHJlaGFiaWxpdGF0aW9uJTIwcGh5c2lvdGhlcmFweXxlbnwxfHx8fDE3NTg4NzMxNzF8MA&ixlib=rb-4.1.0&q=80&w=1080',
       description:
@@ -39,7 +48,7 @@ export function Services() {
     {
       id: 'neuro',
       title: t('neuroConditions'),
-      icon: '⚡',
+      icon: neuroService,
       image:
         'https://images.unsplash.com/photo-1620148222862-b95cf7405a7b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuZXVyb2xvZ2ljYWwlMjByZWhhYmlsaXRhdGlvbiUyMHRoZXJhcHl8ZW58MXx8fHwxNzU4ODczMTc2fDA&ixlib=rb-4.1.0&q=80&w=1080',
       description:
@@ -65,7 +74,7 @@ export function Services() {
     {
       id: 'sports',
       title: t('sportsConditions'),
-      icon: '⚽',
+      icon: sportsService,
       image:
         'https://images.unsplash.com/photo-1754941622136-6664a3f50b2e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBpbmp1cnklMjBwaHlzaW90aGVyYXB5fGVufDF8fHx8MTc1ODg3MzE4MXww&ixlib=rb-4.1.0&q=80&w=1080',
       description:
@@ -91,7 +100,7 @@ export function Services() {
     {
       id: 'joints',
       title: t('jointsConditions'),
-      icon: '🦴',
+      icon: jointsService,
       image:
         'https://images.unsplash.com/photo-1649751361457-01d3a696c7e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxqb2ludCUyMHBhaW4lMjB0cmVhdG1lbnQlMjBwaHlzaW90aGVyYXB5fGVufDF8fHx8MTc1ODg3MzE4NXww&ixlib=rb-4.1.0&q=80&w=1080',
       description:
@@ -117,7 +126,7 @@ export function Services() {
     {
       id: 'surgery',
       title: t('surgeryConditions'),
-      icon: '🏥',
+      icon: surgeryService,
       image:
         'https://images.unsplash.com/photo-1758206523735-079e56f2faf7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3N0JTIwc3VyZ2VyeSUyMHJlaGFiaWxpdGF0aW9uJTIwb3J0aG9wZWRpY3xlbnwxfHx8fDE3NTg4NzMxOTB8MA&ixlib=rb-4.1.0&q=80&w=1080',
       description:
@@ -162,10 +171,12 @@ export function Services() {
               key={service.id}
               variant={activeService === index ? 'default' : 'outline'}
               onClick={() => setActiveService(index)}
-              className="flex items-center space-x-2 h-auto py-3 px-6"
+              className="flex flex-col items-center space-x-2 sm:flex-row h-auto py-3 px-6"
             >
-              <span className="text-lg">{service.icon}</span>
-              <span className="hidden sm:inline">{service.title}</span>
+              <div className="w-5 h-5 flex items-center justify-center">
+                <img src={service.icon} alt={service.description} />
+              </div>
+              <span className="sm:inline">{service.title}</span>
             </Button>
           ))}
         </div>
@@ -195,7 +206,7 @@ export function Services() {
             </div>
 
             {/* Service Stats */}
-            <div className="grid grid-cols-3 gap-4 mt-6">
+            <div className="grid grid-cols-2 gap-4 mt-6">
               <div className="text-center p-4 bg-card rounded-lg border border-border">
                 <Star className="w-6 h-6 text-yellow-500 mx-auto mb-2" />
                 <div className="font-bold">4.9/5</div>
@@ -210,13 +221,6 @@ export function Services() {
                   Minutes/Session
                 </div>
               </div>
-              <div className="text-center p-4 bg-card rounded-lg border border-border">
-                <div className="text-2xl mb-2">📅</div>
-                <div className="font-bold">6-12</div>
-                <div className="text-xs text-muted-foreground">
-                  Sessions Avg
-                </div>
-              </div>
             </div>
           </div>
 
@@ -224,7 +228,12 @@ export function Services() {
           <div className="space-y-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <span className="text-3xl">{services[activeService].icon}</span>
+                <span className="w-6 h-6">
+                  <img
+                    src={services[activeService].icon}
+                    alt={services[activeService].description}
+                  />
+                </span>
                 <h3 className="text-2xl md:text-3xl font-bold text-foreground">
                   {services[activeService].title}
                 </h3>
@@ -247,7 +256,10 @@ export function Services() {
                   {services[activeService].conditions.map(
                     (condition, index) => (
                       <div key={index} className="flex items-center space-x-2">
-                        <ChevronRight className="w-4 h-4 text-primary flex-shrink-0" />
+                        <SquarePlay
+                          strokeWidth={1}
+                          className="w-5 h-5 text-primary flex-shrink-0"
+                        />
                         <span className="text-muted-foreground">
                           {condition}
                         </span>
@@ -271,7 +283,10 @@ export function Services() {
                   {services[activeService].treatments.map(
                     (treatment, index) => (
                       <div key={index} className="flex items-center space-x-2">
-                        <ChevronRight className="w-4 h-4 text-green-500 flex-shrink-0" />
+                        <SquarePlay
+                          strokeWidth={1}
+                          className="w-5 h-5 text-green-500 flex-shrink-0"
+                        />
                         <span className="text-muted-foreground">
                           {treatment}
                         </span>
@@ -288,7 +303,12 @@ export function Services() {
               className="w-full md:w-auto px-8 py-6 text-lg h-auto"
             >
               Book Consultation
-              <ChevronRight className="ms-2 h-5 w-5" />
+              <ChevronRight
+                className={cn(
+                  'ms-2 h-5 w-5',
+                  language === 'ar' && 'rotate-180'
+                )}
+              />
             </Button>
           </div>
         </div>
