@@ -82,11 +82,19 @@ export function Hero() {
             {/* Quick Services */}
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {[
-                { name: t('spineService'), icon: spineService },
-                { name: t('neuroService'), icon: neuroService },
-                { name: t('sportsService'), icon: sportsService },
-                { name: t('jointsService'), icon: jointsService },
-                { name: t('surgeryService'), icon: surgeryService }
+                // { name: t('spineService'), icon: spineService },
+                // { name: t('neuroService'), icon: neuroService },
+                // { name: t('sportsService'), icon: sportsService },
+                // { name: t('jointsService'), icon: jointsService },
+                // { name: t('surgeryService'), icon: surgeryService }
+                { name: 'Spine disorders', icon: spineService },
+                { name: 'Neurological rehabilitation', icon: neuroService },
+                { name: 'Post orthopedic surgery', icon: sportsService },
+                { name: 'recovery sessions', icon: jointsService },
+                { name: 'Sports injury', icon: surgeryService },
+                { name: 'Lymphatic drainage', icon: surgeryService },
+                { name: 'Tension headache', icon: surgeryService },
+                { name: 'Prenatal  physical therapy', icon: surgeryService }
               ].map((service, index) => (
                 <div
                   key={index}

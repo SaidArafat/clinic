@@ -1,10 +1,11 @@
 'use client'
+import { useState } from 'react'
+
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { useLanguage } from '@/contexts'
 import { cn } from '@/lib/utils'
 import { MapPin, MessageCircle, X } from 'lucide-react'
-import { useState } from 'react'
 
 export function WhatsAppFloat() {
   const [isOpen, setIsOpen] = useState(false)
@@ -107,7 +108,7 @@ export function WhatsAppFloat() {
                   ))}
 
                 {/* Quick Actions */}
-                <div className="pt-3 border-t border-border">
+                {/* <div className="pt-3 border-t border-border">
                   <div className="text-xs text-muted-foreground text-center mb-3">
                     {t('quickActions')}
                   </div>
@@ -133,7 +134,7 @@ export function WhatsAppFloat() {
                       {t('askPrices')}
                     </Button>
                   </div>
-                </div>
+                </div> */}
               </CardContent>
             </Card>
           </div>

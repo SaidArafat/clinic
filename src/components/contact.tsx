@@ -64,7 +64,6 @@ export function Contact() {
   }
 
   const additionalInfo = [
-    'insuranceAccepted',
     'homeVisitsAvailable',
     'followUpPrograms',
     'multilingualService'

@@ -36,20 +36,12 @@ export function Services() {
   const services = [
     {
       id: 'spine',
-      title: t('spineConditions'),
+      title: 'Spine disorders',
       icon: spineService,
       image:
         'https://images.unsplash.com/photo-1714929818299-914d3114bcec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcGluZSUyMHJlaGFiaWxpdGF0aW9uJTIwcGh5c2lvdGhlcmFweXxlbnwxfHx8fDE3NTg4NzMxNzF8MA&ixlib=rb-4.1.0&q=80&w=1080',
       description:
         'Comprehensive spine and back pain treatment using advanced manual therapy techniques and German-certified spine mechanics protocols.',
-      conditions: [
-        'Lower Back Pain (Lumbar)',
-        'Neck Pain (Cervical)',
-        'Disc Herniation',
-        'Sciatica',
-        'Spinal Stenosis',
-        'Postural Problems'
-      ],
       treatments: [
         'Manual Therapy',
         'Spinal Mobilization',
@@ -62,20 +54,12 @@ export function Services() {
     },
     {
       id: 'neuro',
-      title: t('neuroConditions'),
+      title: ' Neurological rehabilitation',
       icon: neuroService,
       image:
         'https://images.unsplash.com/photo-1620148222862-b95cf7405a7b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuZXVyb2xvZ2ljYWwlMjByZWhhYmlsaXRhdGlvbiUyMHRoZXJhcHl8ZW58MXx8fHwxNzU4ODczMTc2fDA&ixlib=rb-4.1.0&q=80&w=1080',
       description:
         'Specialized neurological rehabilitation for stroke recovery, brain injury, and nervous system disorders.',
-      conditions: [
-        'Stroke Recovery',
-        'Brain Injury',
-        "Parkinson's Disease",
-        'Multiple Sclerosis',
-        'Spinal Cord Injuries',
-        'Peripheral Neuropathy'
-      ],
       treatments: [
         'Neuromuscular Re-education',
         'Balance Training',
@@ -88,20 +72,12 @@ export function Services() {
     },
     {
       id: 'sports',
-      title: t('sportsConditions'),
+      title: 'Post orthopedic surgery',
       icon: sportsService,
       image:
         'https://images.unsplash.com/photo-1754941622136-6664a3f50b2e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBpbmp1cnklMjBwaHlzaW90aGVyYXB5fGVufDF8fHx8MTc1ODg3MzE4MXww&ixlib=rb-4.1.0&q=80&w=1080',
       description:
         'Expert treatment for sports-related injuries with focus on rapid recovery and performance enhancement.',
-      conditions: [
-        'Muscle Strains',
-        'Ligament Sprains',
-        "Tennis/Golfer's Elbow",
-        'Rotator Cuff Injuries',
-        'Knee Injuries (ACL/MCL)',
-        'Ankle Sprains'
-      ],
       treatments: [
         'Sports Massage',
         'Injury Prevention',
@@ -114,20 +90,12 @@ export function Services() {
     },
     {
       id: 'joints',
-      title: t('jointsConditions'),
+      title: 'recovery sessions',
       icon: jointsService,
       image:
         'https://images.unsplash.com/photo-1649751361457-01d3a696c7e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxqb2ludCUyMHBhaW4lMjB0cmVhdG1lbnQlMjBwaHlzaW90aGVyYXB5fGVufDF8fHx8MTc1ODg3MzE4NXww&ixlib=rb-4.1.0&q=80&w=1080',
       description:
         'Comprehensive joint pain management and mobility restoration for various joint conditions.',
-      conditions: [
-        'Arthritis (OA/RA)',
-        'Frozen Shoulder',
-        'Hip Pain',
-        'Knee Osteoarthritis',
-        'TMJ Disorders',
-        'Joint Stiffness'
-      ],
       treatments: [
         'Joint Mobilization',
         'Range of Motion Therapy',
@@ -140,25 +108,69 @@ export function Services() {
     },
     {
       id: 'surgery',
-      title: t('surgeryConditions'),
+      title: 'Sports injury',
       icon: surgeryService,
       image:
         'https://images.unsplash.com/photo-1758206523735-079e56f2faf7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3N0JTIwc3VyZ2VyeSUyMHJlaGFiaWxpdGF0aW9uJTIwb3J0aG9wZWRpY3xlbnwxfHx8fDE3NTg4NzMxOTB8MA&ixlib=rb-4.1.0&q=80&w=1080',
       description:
         'Specialized post-operative rehabilitation programs to ensure optimal recovery and prevent complications.',
-      conditions: [
-        'Hip Replacement',
-        'Knee Replacement',
-        'Spinal Surgery',
-        'Shoulder Surgery',
-        'Fracture Recovery',
-        'Soft Tissue Surgery'
-      ],
       treatments: [
         'Early Mobilization',
         'Scar Tissue Management',
         'Progressive Strengthening',
         'Functional Training',
+        'Pain Management',
+        'Home Exercise Programs'
+      ],
+      hasVideo: true
+    },
+    {
+      id: 'Lymphatic drainage ',
+      title: 'Lymphatic drainage ',
+      icon: surgeryService,
+      image:
+        'https://images.unsplash.com/photo-1758206523735-079e56f2faf7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3N0JTIwc3VyZ2VyeSUyMHJlaGFiaWxpdGF0aW9uJTIwb3J0aG9wZWRpY3xlbnwxfHx8fDE3NTg4NzMxOTB8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      description:
+        'Specialized post-operative rehabilitation programs to ensure optimal recovery and prevent complications.',
+      treatments: [
+        'Early Mobilization',
+        'Scar Tissue Management',
+        'Progressive Strengthening',
+        'Functional Training',
+        'Pain Management',
+        'Home Exercise Programs'
+      ],
+      hasVideo: true
+    },
+    {
+      id: 'Tension headache',
+      title: 'Tension headache',
+      icon: surgeryService,
+      image:
+        'https://images.unsplash.com/photo-1758206523735-079e56f2faf7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3N0JTIwc3VyZ2VyeSUyMHJlaGFiaWxpdGF0aW9uJTIwb3J0aG9wZWRpY3xlbnwxfHx8fDE3NTg4NzMxOTB8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      description:
+        'Specialized post-operative rehabilitation programs to ensure optimal recovery and prevent complications.',
+      treatments: [
+        'Early Mobilization',
+        'Scar Tissue Management',
+        'Progressive Strengthening',
+        'Functional Training',
+        'Pain Management',
+        'Home Exercise Programs'
+      ],
+      hasVideo: true
+    },
+    {
+      id: 'Prenatal  physical therapy',
+      title: 'Prenatal  physical therapy',
+      icon: surgeryService,
+      image:
+        'https://images.unsplash.com/photo-1758206523735-079e56f2faf7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3N0JTIwc3VyZ2VyeSUyMHJlaGFiaWxpdGF0aW9uJTIwb3J0aG9wZWRpY3xlbnwxfHx8fDE3NTg4NzMxOTB8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      description:
+        'Specialized post-operative rehabilitation programs to ensure optimal recovery and prevent complications.',
+      treatments: [
+        'Early Mobilization',
+        'Scar Tissue Management',
         'Pain Management',
         'Home Exercise Programs'
       ],
@@ -257,33 +269,6 @@ export function Services() {
                 {services[activeService].description}
               </p>
             </div>
-
-            {/* Conditions Treated */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center space-x-2">
-                  <span>🎯</span>
-                  <span>Conditions Treated</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {services[activeService].conditions.map(
-                    (condition, index) => (
-                      <div key={index} className="flex items-center space-x-2">
-                        <SquarePlay
-                          strokeWidth={1}
-                          className="w-5 h-5 text-primary flex-shrink-0"
-                        />
-                        <span className="text-muted-foreground">
-                          {condition}
-                        </span>
-                      </div>
-                    )
-                  )}
-                </div>
-              </CardContent>
-            </Card>
 
             {/* Treatment Methods */}
             <Card>
@@ -403,7 +388,7 @@ function Consultation() {
                 ))}
 
               {/* Quick Actions */}
-              <div className="pt-3 border-t border-border">
+              {/* <div className="pt-3 border-t border-border">
                 <div className="text-xs text-muted-foreground text-center mb-3">
                   {t('quickActions')}
                 </div>
@@ -429,7 +414,7 @@ function Consultation() {
                     {t('askPrices')}
                   </Button>
                 </div>
-              </div>
+              </div> */}
             </div>
           </DialogDescription>
         </DialogHeader>

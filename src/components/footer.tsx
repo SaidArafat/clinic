@@ -5,7 +5,6 @@ import {
   Copyright,
   Facebook,
   Globe,
-  HandHeart,
   House,
   Instagram,
   Linkedin,
@@ -191,10 +190,6 @@ export function Footer() {
               <span className="flex items-center gap-1">
                 <Globe className="w-4 h-4" strokeWidth={1.5} />
                 {t('arabicEnglish')}
-              </span>
-              <span className="flex items-center gap-1">
-                <HandHeart className="w-5 h-5" strokeWidth={1.5} />
-                {t('insuranceAccepted')}
               </span>
             </div>
           </div>
