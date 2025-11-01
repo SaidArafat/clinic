@@ -1,13 +1,16 @@
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { useLanguage } from '@/contexts'
+import { useLanguage, useVideoPlayer } from '@/contexts'
+
 import {
-  jointsService,
-  neuroService,
-  spineService,
-  sportsService,
-  surgeryService
-} from '@/lib/icons'
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger
+} from '@/components/ui/dialog'
+import { services } from '@/data/services'
 import { cn } from '@/lib/utils'
 import {
   ChevronRight,
@@ -19,164 +22,12 @@ import {
 } from 'lucide-react'
 import { useState } from 'react'
 import { ImageWithFallback } from './fallback-images/image-with-fallback'
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger
-} from './ui/dialog'
 
 export function Services() {
   const [activeService, setActiveService] = useState(0)
 
   const { t } = useLanguage()
-
-  const services = [
-    {
-      id: 'spine',
-      title: 'Spine disorders',
-      icon: spineService,
-      image:
-        'https://images.unsplash.com/photo-1714929818299-914d3114bcec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcGluZSUyMHJlaGFiaWxpdGF0aW9uJTIwcGh5c2lvdGhlcmFweXxlbnwxfHx8fDE3NTg4NzMxNzF8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      description:
-        'Comprehensive spine and back pain treatment using advanced manual therapy techniques and German-certified spine mechanics protocols.',
-      treatments: [
-        'Manual Therapy',
-        'Spinal Mobilization',
-        'Core Strengthening',
-        'Postural Correction',
-        'Pain Management',
-        'Movement Education'
-      ],
-      hasVideo: true
-    },
-    {
-      id: 'neuro',
-      title: ' Neurological rehabilitation',
-      icon: neuroService,
-      image:
-        'https://images.unsplash.com/photo-1620148222862-b95cf7405a7b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuZXVyb2xvZ2ljYWwlMjByZWhhYmlsaXRhdGlvbiUyMHRoZXJhcHl8ZW58MXx8fHwxNzU4ODczMTc2fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      description:
-        'Specialized neurological rehabilitation for stroke recovery, brain injury, and nervous system disorders.',
-      treatments: [
-        'Neuromuscular Re-education',
-        'Balance Training',
-        'Gait Training',
-        'Functional Mobility',
-        'Coordination Exercises',
-        'Cognitive Motor Training'
-      ],
-      hasVideo: true
-    },
-    {
-      id: 'sports',
-      title: 'Post orthopedic surgery',
-      icon: sportsService,
-      image:
-        'https://images.unsplash.com/photo-1754941622136-6664a3f50b2e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBpbmp1cnklMjBwaHlzaW90aGVyYXB5fGVufDF8fHx8MTc1ODg3MzE4MXww&ixlib=rb-4.1.0&q=80&w=1080',
-      description:
-        'Expert treatment for sports-related injuries with focus on rapid recovery and performance enhancement.',
-      treatments: [
-        'Sports Massage',
-        'Injury Prevention',
-        'Performance Enhancement',
-        'Return to Sport Programs',
-        'Biomechanical Analysis',
-        'Strength Training'
-      ],
-      hasVideo: true
-    },
-    {
-      id: 'joints',
-      title: 'recovery sessions',
-      icon: jointsService,
-      image:
-        'https://images.unsplash.com/photo-1649751361457-01d3a696c7e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxqb2ludCUyMHBhaW4lMjB0cmVhdG1lbnQlMjBwaHlzaW90aGVyYXB5fGVufDF8fHx8MTc1ODg3MzE4NXww&ixlib=rb-4.1.0&q=80&w=1080',
-      description:
-        'Comprehensive joint pain management and mobility restoration for various joint conditions.',
-      treatments: [
-        'Joint Mobilization',
-        'Range of Motion Therapy',
-        'Pain Relief Techniques',
-        'Strengthening Exercises',
-        'Heat/Cold Therapy',
-        'Activity Modification'
-      ],
-      hasVideo: true
-    },
-    {
-      id: 'surgery',
-      title: 'Sports injury',
-      icon: surgeryService,
-      image:
-        'https://images.unsplash.com/photo-1758206523735-079e56f2faf7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3N0JTIwc3VyZ2VyeSUyMHJlaGFiaWxpdGF0aW9uJTIwb3J0aG9wZWRpY3xlbnwxfHx8fDE3NTg4NzMxOTB8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      description:
-        'Specialized post-operative rehabilitation programs to ensure optimal recovery and prevent complications.',
-      treatments: [
-        'Early Mobilization',
-        'Scar Tissue Management',
-        'Progressive Strengthening',
-        'Functional Training',
-        'Pain Management',
-        'Home Exercise Programs'
-      ],
-      hasVideo: true
-    },
-    {
-      id: 'Lymphatic drainage ',
-      title: 'Lymphatic drainage ',
-      icon: surgeryService,
-      image:
-        'https://images.unsplash.com/photo-1758206523735-079e56f2faf7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3N0JTIwc3VyZ2VyeSUyMHJlaGFiaWxpdGF0aW9uJTIwb3J0aG9wZWRpY3xlbnwxfHx8fDE3NTg4NzMxOTB8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      description:
-        'Specialized post-operative rehabilitation programs to ensure optimal recovery and prevent complications.',
-      treatments: [
-        'Early Mobilization',
-        'Scar Tissue Management',
-        'Progressive Strengthening',
-        'Functional Training',
-        'Pain Management',
-        'Home Exercise Programs'
-      ],
-      hasVideo: true
-    },
-    {
-      id: 'Tension headache',
-      title: 'Tension headache',
-      icon: surgeryService,
-      image:
-        'https://images.unsplash.com/photo-1758206523735-079e56f2faf7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3N0JTIwc3VyZ2VyeSUyMHJlaGFiaWxpdGF0aW9uJTIwb3J0aG9wZWRpY3xlbnwxfHx8fDE3NTg4NzMxOTB8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      description:
-        'Specialized post-operative rehabilitation programs to ensure optimal recovery and prevent complications.',
-      treatments: [
-        'Early Mobilization',
-        'Scar Tissue Management',
-        'Progressive Strengthening',
-        'Functional Training',
-        'Pain Management',
-        'Home Exercise Programs'
-      ],
-      hasVideo: true
-    },
-    {
-      id: 'Prenatal  physical therapy',
-      title: 'Prenatal  physical therapy',
-      icon: surgeryService,
-      image:
-        'https://images.unsplash.com/photo-1758206523735-079e56f2faf7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3N0JTIwc3VyZ2VyeSUyMHJlaGFiaWxpdGF0aW9uJTIwb3J0aG9wZWRpY3xlbnwxfHx8fDE3NTg4NzMxOTB8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      description:
-        'Specialized post-operative rehabilitation programs to ensure optimal recovery and prevent complications.',
-      treatments: [
-        'Early Mobilization',
-        'Scar Tissue Management',
-        'Pain Management',
-        'Home Exercise Programs'
-      ],
-      hasVideo: true
-    }
-  ]
+  const { openVideo } = useVideoPlayer()
 
   return (
     <section id="services" className="py-20 bg-background">
@@ -203,7 +54,7 @@ export function Services() {
               <div className="w-5 h-5 flex items-center justify-center">
                 <img src={service.icon} alt={service.description} />
               </div>
-              <span className="sm:inline">{service.title}</span>
+              <span className="sm:inline">{t(service.title)}</span>
             </Button>
           ))}
         </div>
@@ -222,10 +73,18 @@ export function Services() {
               {/* Video Play Overlay */}
               {services[activeService].hasVideo && (
                 <div className="absolute inset-0 bg-black/30 flex items-center justify-center group cursor-pointer">
-                  <div className="bg-white/90 dark:bg-black/90 rounded-full p-6 shadow-lg transform group-hover:scale-110 transition-transform">
+                  <button
+                    onClick={() =>
+                      openVideo({
+                        title: t(services[activeService].title),
+                        src: services[activeService].video
+                      })
+                    }
+                    className="bg-white/90 dark:bg-black/90 rounded-full p-6 shadow-lg transform group-hover:scale-110 transition-transform"
+                  >
                     <Play className="w-8 h-8 text-primary ms-1" />
-                  </div>
-                  <div className="absolute bottom-4 end-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
+                  </button>
+                  <div className="sr-only absolute bottom-4 end-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
                     Treatment Video
                   </div>
                 </div>
@@ -258,15 +117,17 @@ export function Services() {
                 <span className="w-6 h-6">
                   <img
                     src={services[activeService].icon}
-                    alt={services[activeService].description}
+                    alt={t(
+                      `servicesSection.spineDisorders.${services[activeService].description}`
+                    )}
                   />
                 </span>
                 <h3 className="text-2xl md:text-3xl font-bold text-foreground">
-                  {services[activeService].title}
+                  {t(services[activeService].title)}
                 </h3>
               </div>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                {services[activeService].description}
+                {t(services[activeService].description)}
               </p>
             </div>
 
@@ -275,22 +136,37 @@ export function Services() {
               <CardHeader>
                 <CardTitle className="flex items-center space-x-2">
                   <span>🛠️</span>
-                  <span>Treatment Methods</span>
+                  <span>{t('servicesSection.videos')}</span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div
+                  className={cn(
+                    'grid grid-cols-1 md:grid-cols-2 gap-3',
+                    services[activeService].treatments.length === 1 &&
+                      'md:grid-cols-1'
+                  )}
+                >
                   {services[activeService].treatments.map(
-                    (treatment, index) => (
-                      <div key={index} className="flex items-center space-x-2">
+                    ({ title, src }, index) => (
+                      <button
+                        key={index}
+                        className="flex items-center space-x-2 cursor-pointer"
+                        onClick={() =>
+                          openVideo({
+                            title: t(title),
+                            src
+                          })
+                        }
+                      >
                         <SquarePlay
                           strokeWidth={1}
                           className="w-5 h-5 text-green-500 flex-shrink-0"
                         />
                         <span className="text-muted-foreground">
-                          {treatment}
+                          {t(title)}
                         </span>
-                      </div>
+                      </button>
                     )
                   )}
                 </div>

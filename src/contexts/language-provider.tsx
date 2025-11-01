@@ -39,6 +39,15 @@ const translations = {
     learnMore: 'Learn More',
     years: 'Years',
 
+    // Hero services
+    spineDisorders: 'Spine Disorders',
+    neurologicalRehabilitation: 'Neurological Rehabilitation',
+    postOrthopedicSurgery: 'Post Orthopedic Surgery',
+    sportsInjury: 'Sports Injury',
+    lymphaticDrainage: 'Lymphatic Drainage',
+    tensionHeadache: 'Tension Headache',
+    prenatalPhysicalTherapy: 'Prenatal Physical Therapy',
+
     // About
     aboutDrAshraf: 'About Dr. Ashraf',
     consultantPhysiotherapist: 'Consultant Physiotherapist',
@@ -53,6 +62,12 @@ const translations = {
     treatmentPhilosophy: 'Treatment Philosophy',
     philosophyDescription:
       'Our approach focuses on personalized care, combining evidence-based treatment techniques with manual therapy expertise. We believe in treating the root cause, not just the symptoms, ensuring long-term recovery and preventing future injuries.',
+    stats: {
+      happyPatients: 'Happy Patients',
+      yearsExperience: 'Years Experience',
+      certifications: 'Certifications',
+      successRate: 'Success Rate'
+    },
 
     // Services
     ourServices: 'Our Services',
@@ -60,6 +75,64 @@ const translations = {
       'Comprehensive physiotherapy services with over 25 years of experience',
     bookConsultation: 'Book Consultation',
 
+    servicesSection: {
+      videos: 'Videos',
+
+      spineDisorders: {
+        title: 'Spine Disorders',
+        description:
+          'Advanced treatment for spine and back pain using manual therapy and certified spine protocols.',
+        kyphosis: 'Kyphosis',
+        scoliosis: 'Scoliosis',
+        neckPain: 'Neck Pain'
+      },
+
+      neurologicalRehabilitation: {
+        title: 'Neurological Rehabilitation',
+        description:
+          'Specialized care for stroke recovery, brain injuries, and nervous system conditions.',
+        dropFoot: 'Drop Foot',
+        hemiparesis: 'Hemiparesis'
+      },
+
+      postOrthopedicSurgery: {
+        title: 'Post Orthopedic Surgery',
+        description:
+          'Rehabilitation programs designed for faster recovery after orthopedic operations.',
+        rehabilitation: 'Rehabilitation',
+        elbowStiffness: 'Elbow Stiffness'
+      },
+
+      sportsInjury: {
+        title: 'Sports Injury',
+        description:
+          'Professional physiotherapy for sports injuries with focus on safe and quick return to activity.',
+        ankleSprain: 'Ankle Sprain',
+        shoulderPain: 'Shoulder Pain',
+        meniscusTearDegeneration: 'Meniscus Tear vs. Degeneration'
+      },
+
+      lymphaticDrainage: {
+        title: 'Lymphatic Drainage',
+        description:
+          'Therapeutic techniques to improve circulation and reduce swelling through lymphatic massage.',
+        lymphaticDrainage: 'Lymphatic Drainage'
+      },
+
+      tensionHeadache: {
+        title: 'Tension Headache',
+        description:
+          'Manual therapy to relieve tension headaches caused by muscle strain and poor posture.',
+        tensionHeadache: 'Tension Headache'
+      },
+
+      prenatalPhysicalTherapy: {
+        title: 'Prenatal Physical Therapy',
+        description:
+          'Safe physiotherapy programs to support women during pregnancy and relieve body strain.',
+        prenatalPhysicalTherapy: 'Prenatal Physical Therapy'
+      }
+    },
     // Reviews
     patientReviews: 'Patient Reviews',
     reviewsDescription: 'Hear from our patients about their recovery journeys',
@@ -166,6 +239,15 @@ const translations = {
     learnMore: 'اعرف المزيد',
     years: 'عاماً',
 
+    // Hero services
+    spineDisorders: 'اضطرابات العمود الفقري',
+    neurologicalRehabilitation: 'تأهيل حالات الأعصاب',
+    postOrthopedicSurgery: 'تأهيل جراحات العظام',
+    sportsInjury: 'إصابات الملاعب',
+    lymphaticDrainage: 'المساج الليمفاوي',
+    tensionHeadache: 'الصداع الناتج عن التوتر',
+    prenatalPhysicalTherapy: 'تأهيل السيدات الحوامل للولادة الطبيعية',
+
     // About
     aboutDrAshraf: 'عن الدكتور أشرف',
     consultantPhysiotherapist: 'استشاري العلاج الطبيعي',
@@ -181,10 +263,76 @@ const translations = {
     philosophyDescription:
       'نهجنا يركز على الرعاية الشخصية، مع دمج تقنيات العلاج المبنية على الأدلة العلمية مع خبرة العلاج اليدوي. نؤمن بعلاج السبب الجذري وليس فقط الأعراض، مما يضمن الشفاء طويل الأمد ومنع الإصابات المستقبلية.',
 
+    stats: {
+      happyPatients: 'مرضى سعداء',
+      yearsExperience: 'سنوات من الخبرة',
+      certifications: 'شهادات معتمدة',
+      successRate: 'نسبة النجاح'
+    },
+
     // Services
     ourServices: 'خدماتنا',
     servicesDescription: 'خدمات علاج طبيعي شاملة مع أكثر من 25 عاماً من الخبرة',
     bookConsultation: 'احجز استشارة',
+
+    servicesSection: {
+      videos: 'فيديوهات',
+
+      spineDisorders: {
+        title: 'اضطرابات العمود الفقري',
+        description:
+          'علاج شامل لآلام العمود الفقري والظهر باستخدام تقنيات العلاج اليدوي المتقدمة وبروتوكولات ميكانيكا العمود الفقري المعتمدة من ألمانيا.',
+        kyphosis: 'الحدبة',
+        scoliosis: 'الجنف',
+        neckPain: 'ألم الرقبة'
+      },
+
+      neurologicalRehabilitation: {
+        title: 'تأهيل حالات الأعصاب',
+        description:
+          'تأهيل عصبي متخصص لحالات ما بعد الجلطات الدماغية، وإصابات الدماغ، واضطرابات الجهاز العصبي.',
+        dropFoot: 'هبوط القدم',
+        hemiparesis: 'شلل نصفي'
+      },
+
+      postOrthopedicSurgery: {
+        title: 'تأهيل جراحات العظام',
+        description:
+          'علاج متخصص لإصابات العظام الناتجة عن العمليات الجراحية مع التركيز على التعافي السريع واستعادة الأداء الكامل.',
+        rehabilitation: 'تأهيل الرابط الصليبي',
+        elbowStiffness: 'تيبس الكوع'
+      },
+
+      sportsInjury: {
+        title: 'إصابات الملاعب',
+        description:
+          'علاج طبيعي متخصص لإصابات الرياضيين مع التركيز على التعافي الآمن والسريع للعودة للنشاط.',
+        ankleSprain: 'التواء الكاحل',
+        shoulderPain: 'ألم الكتف',
+        meniscusTearDegeneration: 'تمزق الغضروف الهلالي أو تآكله'
+      },
+
+      lymphaticDrainage: {
+        title: 'المساج الليمفاوي',
+        description:
+          'تقنيات علاجية لتحسين الدورة الدموية وتقليل التورم من خلال التدليك اللمفاوي.',
+        lymphaticDrainage: 'المساج الليمفاوي'
+      },
+
+      tensionHeadache: {
+        title: 'الصداع الناتج عن التوتر',
+        description:
+          'علاج يدوي لتخفيف الصداع الناتج عن شد العضلات أو الوضعيات الخاطئة.',
+        tensionHeadache: 'الصداع الناتج عن التوتر'
+      },
+
+      prenatalPhysicalTherapy: {
+        title: 'تأهيل السيدات الحوامل للولادة الطبيعية',
+        description:
+          'برامج علاج طبيعي آمنة لدعم المرأة الحامل وتخفيف الإجهاد والآلام المصاحبة للحمل.',
+        prenatalPhysicalTherapy: 'تأهيل السيدات الحوامل للولادة الطبيعية'
+      }
+    },
 
     // Reviews
     patientReviews: 'آراء المرضى',
@@ -290,9 +438,14 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   }
 
   const t = (key: string): string => {
-    return (
-      translations[language][key as keyof (typeof translations)['en']] || key
-    )
+    const keys = key.split('.')
+    let value: any = translations[language]
+
+    for (const k of keys) {
+      value = value?.[k]
+    }
+
+    return typeof value === 'string' ? value : key
   }
 
   return (

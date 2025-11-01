@@ -137,7 +137,7 @@ export function Contact() {
                   </div>
 
                   {/* Features */}
-                  <div>
+                  <div className="sr-only">
                     <div className="font-medium mb-3">
                       {t('clinicFeatures')}:
                     </div>

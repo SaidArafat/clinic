@@ -1,4 +1,5 @@
 import { useLanguage } from '@/contexts'
+import { scrollToSection } from '@/lib/utils'
 import {
   Check,
   Clock,
@@ -7,10 +8,9 @@ import {
   Globe,
   House,
   Instagram,
-  Linkedin,
-  Mail,
   MapPin,
-  Phone
+  Phone,
+  Youtube
 } from 'lucide-react'
 
 export function Footer() {
@@ -33,18 +33,27 @@ export function Footer() {
   ]
 
   const socialLinks = [
-    { name: 'Facebook', icon: Facebook, href: '#' },
-    { name: 'Instagram', icon: Instagram, href: '#' },
-    { name: 'LinkedIn', icon: Linkedin, href: '#' },
-    { name: 'Email', icon: Mail, href: 'mailto:info@drashrafkotb.com' }
-  ]
-
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+    {
+      name: 'Youtube',
+      icon: Youtube,
+      href: 'https://www.youtube.com/@drashrafkotob'
+    },
+    {
+      name: 'Facebook',
+      icon: Facebook,
+      href: 'https://www.facebook.com/DoctorAshrafkotob'
+    },
+    {
+      name: 'Instagram-1',
+      icon: Instagram,
+      href: 'https://www.instagram.com/drashrafkotob'
+    },
+    {
+      name: 'Instagram-2',
+      icon: Instagram,
+      href: 'https://www.instagram.com/peakmotion.therapy'
     }
-  }
+  ]
 
   return (
     <footer className="bg-secondary/10 border-t border-border">
@@ -70,13 +79,6 @@ export function Footer() {
                 <Phone className="w-4 h-4 text-primary" />
                 <span className="text-sm text-muted-foreground" dir="ltr">
                   +20 100 800 9763
-                </span>
-              </div>
-
-              <div className="flex items-center space-x-3">
-                <Mail className="w-4 h-4 text-primary" />
-                <span className="text-sm text-muted-foreground">
-                  info@drashrafkotb.com
                 </span>
               </div>
 
@@ -134,7 +136,7 @@ export function Footer() {
                   <MapPin className="w-4 h-4 text-primary mt-0.5" />
                   <div className="text-sm text-muted-foreground">
                     <div className="font-medium">{t('locationZayed')}</div>
-                    <div>Sheikh Zayed City, Giza</div>
+                    <div>{t('zayedAddress')}</div>
                   </div>
                 </div>
 
@@ -153,7 +155,7 @@ export function Footer() {
               <h4 className="font-bold text-foreground mb-4">
                 {t('followUs')}
               </h4>
-              <div className="flex space-x-3">
+              <div className="grid grid-cols-4 gap-3">
                 {socialLinks.map(social => (
                   <a
                     key={social.name}
@@ -165,6 +167,30 @@ export function Footer() {
                     <social.icon className="w-4 h-4" />
                   </a>
                 ))}
+                <a
+                  href="https://www.snapchat.com/add/ashraf_kotob123?share_id=BZIEdMWHSAOOWhZZ5p1T1A&locale=en_EG"
+                  className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <SnapchatIcon className="w-4 h-4" />
+                </a>
+                <a
+                  href="https://www.tiktok.com/@ashraf.kotob"
+                  className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <TikTokIcon className="w-4 h-4" />
+                </a>
+                <a
+                  href="https://www.tiktok.com/@peakmotiontherapy"
+                  className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <TikTokIcon className="w-4 h-4" />
+                </a>
               </div>
             </div>
           </div>
@@ -198,3 +224,27 @@ export function Footer() {
     </footer>
   )
 }
+
+export const TikTokIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    viewBox="0 0 256 256"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="currentColor"
+    stroke="none"
+    {...props}
+  >
+    <path d="M204.3 77.5a55.6 55.6 0 0 1-31.2-9.6v60.4a68.2 68.2 0 1 1-68.2-68.2 69.5 69.5 0 0 1 8.4.5v35.7a34 34 0 1 0 26.1 33V16h34.1a55.6 55.6 0 0 0 55.6 55.6v34.1a55.5 55.5 0 0 1-24.8-6.2Z" />
+  </svg>
+)
+
+export const SnapchatIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    viewBox="0 0 256 256"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="currentColor"
+    stroke="none"
+    {...props}
+  >
+    <path d="M128 16c-39.7 0-64 27.7-64 67.6v21.5c0 14.4-5.1 27.4-13.3 35.3-4.2 4.1-9.4 6.4-14.9 7.4-2.9.5-4.8 3.4-4 6.2 1.5 5.1 7.4 8.4 13.8 11.1 6.4 2.8 10.6 4.8 10.6 10.4 0 6.2-6.6 10.8-13.6 14.9-4.6 2.6-9.3 5.3-9.3 9.9 0 4.2 3.4 7.4 8 8.5 10.7 2.6 18.3 8.5 26.2 14.8 10.8 8.4 24.8 18.5 49.8 18.5h28.1c25 0 39-10.1 49.8-18.5 7.9-6.3 15.5-12.2 26.2-14.8 4.6-1.1 8-4.3 8-8.5 0-4.6-4.7-7.3-9.3-9.9-7-4.1-13.6-8.7-13.6-14.9 0-5.6 4.2-7.6 10.6-10.4 6.4-2.7 12.3-6 13.8-11.1.8-2.8-1.1-5.7-4-6.2-5.5-1-10.7-3.3-14.9-7.4-8.2-7.9-13.3-20.9-13.3-35.3V83.6C192 43.7 167.7 16 128 16Z" />
+  </svg>
+)

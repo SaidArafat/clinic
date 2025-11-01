@@ -14,10 +14,10 @@ export function About() {
   ]
 
   const stats = [
-    { icon: Users, value: '5000+', label: 'Happy Patients' },
-    { icon: Clock, value: '25+', label: 'Years Experience' },
-    { icon: Award, value: '15+', label: 'Certifications' },
-    { icon: CheckCircle, value: '95%', label: 'Success Rate' }
+    { icon: Users, value: '5000+', key: 'happyPatients' },
+    { icon: Clock, value: '25+', key: 'yearsExperience' },
+    { icon: Award, value: '15+', key: 'certifications' },
+    { icon: CheckCircle, value: '95%', key: 'successRate' }
   ]
 
   return (
@@ -75,7 +75,7 @@ export function About() {
                     {stat.value}
                   </div>
                   <div className="text-sm text-muted-foreground">
-                    {stat.label}
+                    {t(`stats.${stat.key}`)}
                   </div>
                 </div>
               ))}
@@ -87,11 +87,11 @@ export function About() {
             {/* Professional setup image */}
             <div className="relative">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1681505512385-8b9d567a56c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwY2VydGlmaWNhdGUlMjBwaHlzaW90aGVyYXB5JTIwY2xpbmljfGVufDF8fHx8MTc1ODg3MzE0NXww&ixlib=rb-4.1.0&q=80&w=1080"
+                src="https://images.pexels.com/photos/20860603/pexels-photo-20860603.jpeg?_gl=1*1lyys3q*_ga*MTQ2MTY5OTkwNS4xNzYxOTkxODk3*_ga_8JE65Q40S6*czE3NjE5OTE4OTYkbzEkZzEkdDE3NjE5OTM4MTkkajMzJGwwJGgw"
                 alt="Professional medical setup"
-                className="w-full h-64 object-cover rounded-lg shadow-lg"
+                className="w-full h-80 object-cover rounded-lg shadow-lg"
               />
-              <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
+              <div className="sr-only absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
                 Est. 2004
               </div>
             </div>
@@ -114,7 +114,9 @@ export function About() {
               </div>
               <div className="bg-card p-4 rounded-lg border border-border text-center">
                 <Users className="w-8 h-8 text-blue-500 mx-auto mb-2" />
-                <div className="font-medium text-sm">Neuro Rehab</div>
+                <div className="font-medium text-sm">
+                  Neurological Rehabilitation
+                </div>
                 <div className="text-xs text-muted-foreground">Specialist</div>
               </div>
               <div className="bg-card p-4 rounded-lg border border-border text-center">

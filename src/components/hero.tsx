@@ -1,31 +1,23 @@
-import { useLanguage } from '@/contexts'
-import {
-  jointsService,
-  neuroService,
-  spineService,
-  sportsService,
-  surgeryService
-} from '@/lib/icons'
 import { ArrowDown, Play } from 'lucide-react'
+
+import heroImage from '@/assets/hero-image.jpg'
+import { Button } from '@/components/ui/button'
+import { useLanguage, useVideoPlayer } from '@/contexts'
+import {
+  lymphaticDrainage,
+  neurologicalRehabilitation,
+  postOrthopedicSurgery,
+  prenatalPhysicalTherapy,
+  spineDisorders,
+  sportsInjury,
+  tensionHeadache
+} from '@/lib/icons'
+import { scrollToSection } from '@/lib/utils'
 import { ImageWithFallback } from './fallback-images/image-with-fallback'
-import { Button } from './ui/button'
 
 export function Hero() {
   const { t } = useLanguage()
-
-  const scrollToContact = () => {
-    const element = document.querySelector('#contact')
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
-
-  const scrollToServices = () => {
-    const element = document.querySelector('#services')
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
+  const { openVideo } = useVideoPlayer()
 
   return (
     <section
@@ -60,7 +52,7 @@ export function Hero() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button
-                onClick={scrollToContact}
+                onClick={() => scrollToSection('#contact')}
                 size="lg"
                 className="px-8 py-6 text-lg h-auto"
               >
@@ -70,7 +62,7 @@ export function Hero() {
 
               <Button
                 variant="outline"
-                onClick={scrollToServices}
+                onClick={() => scrollToSection('#services')}
                 size="lg"
                 className="px-8 py-6 text-lg h-auto"
               >
@@ -82,24 +74,27 @@ export function Hero() {
             {/* Quick Services */}
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {[
-                // { name: t('spineService'), icon: spineService },
-                // { name: t('neuroService'), icon: neuroService },
-                // { name: t('sportsService'), icon: sportsService },
-                // { name: t('jointsService'), icon: jointsService },
-                // { name: t('surgeryService'), icon: surgeryService }
-                { name: 'Spine disorders', icon: spineService },
-                { name: 'Neurological rehabilitation', icon: neuroService },
-                { name: 'Post orthopedic surgery', icon: sportsService },
-                { name: 'recovery sessions', icon: jointsService },
-                { name: 'Sports injury', icon: surgeryService },
-                { name: 'Lymphatic drainage', icon: surgeryService },
-                { name: 'Tension headache', icon: surgeryService },
-                { name: 'Prenatal  physical therapy', icon: surgeryService }
+                { name: t('spineDisorders'), icon: spineDisorders },
+                {
+                  name: t('neurologicalRehabilitation'),
+                  icon: neurologicalRehabilitation
+                },
+                {
+                  name: t('postOrthopedicSurgery'),
+                  icon: postOrthopedicSurgery
+                },
+                { name: t('sportsInjury'), icon: sportsInjury },
+                { name: t('lymphaticDrainage'), icon: lymphaticDrainage },
+                { name: t('tensionHeadache'), icon: tensionHeadache },
+                {
+                  name: t('prenatalPhysicalTherapy'),
+                  icon: prenatalPhysicalTherapy
+                }
               ].map((service, index) => (
                 <div
                   key={index}
                   className="p-4 flex flex-col justify-center items-center gap-4 text-center rounded-lg border border-border bg-card hover:bg-accent transition-colors cursor-pointer group"
-                  onClick={scrollToServices}
+                  onClick={() => scrollToSection('#services')}
                 >
                   <div className="w-10 h-10 flex items-center justify-center group-hover:scale-110 transition-transform">
                     <img src={service.icon} alt={service.name} />
@@ -122,17 +117,25 @@ export function Hero() {
               {/* Main image container */}
               <div className="relative bg-background rounded-2xl p-2 shadow-2xl">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1645066928295-2506defde470?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBkb2N0b3IlMjBwaHlzaW90aGVyYXBpc3QlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NTg4NzM2Mjh8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                  src={heroImage}
                   alt="Dr. Ashraf Kotb - Consultant Physiotherapist"
                   className="w-full h-auto rounded-xl object-cover shadow-lg"
                 />
 
                 {/* Video play overlay */}
-                <div className="absolute inset-0 flex items-center justify-center bg-black/20 rounded-xl opacity-0 hover:opacity-100 transition-opacity cursor-pointer">
+                <button
+                  onClick={() =>
+                    openVideo({
+                      title: t('heroDescription'),
+                      src: 'https://www.youtube.com/shorts/62kErCeG2rI'
+                    })
+                  }
+                  className="absolute inset-0 flex items-center justify-center bg-black/20 rounded-xl opacity-50 hover:opacity-100 transition-opacity cursor-pointer"
+                >
                   <div className="bg-white/90 dark:bg-black/90 rounded-full p-4 shadow-lg transform hover:scale-110 transition-transform">
                     <Play className="w-8 h-8 text-primary ms-1" />
                   </div>
-                </div>
+                </button>
               </div>
 
               {/* Experience badge */}
