@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from 'react'
 
 type Video = {
   title: string
-  src: string
+  src: string | null
 }
 
 type VideoPlayerContextType = {
