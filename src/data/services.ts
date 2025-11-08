@@ -3,6 +3,7 @@ import {
   neurologicalRehabilitation,
   postOrthopedicSurgery,
   prenatalPhysicalTherapy,
+  recoverySessions,
   spineDisorders,
   sportsInjury,
   tensionHeadache
@@ -17,6 +18,11 @@ export const services = [
       'https://images.unsplash.com/photo-1714929818299-914d3114bcec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcGluZSUyMHJlaGFiaWxpdGF0aW9uJTIwcGh5c2lvdGhlcmFweXxlbnwxfHx8fDE3NTg4NzMxNzF8MA&ixlib=rb-4.1.0&q=80&w=1080',
     description: 'servicesSection.spineDisorders.description',
     treatments: [
+      // added: done
+      {
+        title: 'servicesSection.spineDisorders.discProlapse',
+        src: 'https://youtube.com/shorts/QmnV0ZamM6U?feature=share'
+      },
       {
         title: 'servicesSection.spineDisorders.kyphosis',
         src: 'https://www.youtube.com/watch?v=DCfWhOCqrJ4&list=PL6kCEMPsrM7GzPMQ5G8f2_D7B_gYZFGC5'
@@ -27,6 +33,11 @@ export const services = [
       },
       {
         title: 'servicesSection.spineDisorders.neckPain',
+        src: 'https://www.youtube.com/watch?v=Mzt3H3B9-S0&list=PL6kCEMPsrM7GzPMQ5G8f2_D7B_gYZFGC5'
+      },
+      // added
+      {
+        title: 'servicesSection.spineDisorders.lowerBackPain',
         src: 'https://www.youtube.com/watch?v=Mzt3H3B9-S0&list=PL6kCEMPsrM7GzPMQ5G8f2_D7B_gYZFGC5'
       }
     ],
@@ -49,6 +60,11 @@ export const services = [
       {
         title: 'servicesSection.neurologicalRehabilitation.hemiparesis',
         src: 'https://www.youtube.com/watch?v=ScJAAG_T2sU&list=PL6kCEMPsrM7F8Pl2mJdPNhANnowXXUWNu'
+      },
+      // added
+      {
+        title: 'servicesSection.neurologicalRehabilitation.paraParaparesis',
+        src: 'https://www.youtube.com/watch?v=ScJAAG_T2sU&list=PL6kCEMPsrM7F8Pl2mJdPNhANnowXXUWNu'
       }
     ],
     hasVideo: true,
@@ -63,6 +79,11 @@ export const services = [
       'https://plus.unsplash.com/premium_photo-1661436735845-d136f5778f14?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070',
     description: 'servicesSection.postOrthopedicSurgery.description',
     treatments: [
+      // added
+      {
+        title: 'servicesSection.postOrthopedicSurgery.totalKneeReplacement',
+        src: 'https://www.youtube.com/watch?v=YkY-nceZAoQ&list=PL6kCEMPsrM7E-O4f6NcACyRr99Cs45zix'
+      },
       {
         title: 'servicesSection.postOrthopedicSurgery.rehabilitation',
         src: 'https://www.youtube.com/watch?v=YkY-nceZAoQ&list=PL6kCEMPsrM7E-O4f6NcACyRr99Cs45zix'
@@ -77,6 +98,24 @@ export const services = [
       'https://www.youtube.com/watch?v=YkY-nceZAoQ&list=PL6kCEMPsrM7E-O4f6NcACyRr99Cs45zix'
   },
   {
+    id: 'recovery-sessions.',
+    title: 'servicesSection.recoverySessions.title',
+    icon: recoverySessions,
+    image:
+      'https://images.pexels.com/photos/5473223/pexels-photo-5473223.jpeg?_gl=1*wv9kjs*_ga*MTQ2MTY5OTkwNS4xNzYxOTkxODk3*_ga_8JE65Q40S6*czE3NjI1OTUxMjAkbzIkZzEkdDE3NjI1OTUxNzQkajYkbDAkaDA.',
+    description: 'servicesSection.recoverySessions.description',
+    treatments: [
+      // added
+      {
+        title: 'servicesSection.recoverySessions.title',
+        src: 'https://www.youtube.com/watch?v=YkY-nceZAoQ&list=PL6kCEMPsrM7E-O4f6NcACyRr99Cs45zix'
+      }
+    ],
+    hasVideo: true,
+    video:
+      'https://www.youtube.com/watch?v=YkY-nceZAoQ&list=PL6kCEMPsrM7E-O4f6NcACyRr99Cs45zix'
+  },
+  {
     id: 'sports-injury',
     title: 'servicesSection.sportsInjury.title',
     icon: sportsInjury,
@@ -84,6 +123,11 @@ export const services = [
       'https://images.pexels.com/photos/20860603/pexels-photo-20860603.jpeg?_gl=1*1pgu867*_ga*MTQ2MTY5OTkwNS4xNzYxOTkxODk3*_ga_8JE65Q40S6*czE3NjE5OTE4OTYkbzEkZzEkdDE3NjE5OTE5NzQkajU5JGwwJGgw',
     description: 'servicesSection.sportsInjury.description',
     treatments: [
+      // added
+      {
+        title: 'servicesSection.sportsInjury.adductorsStrain',
+        src: 'https://www.youtube.com/watch?v=B0Cno18Chpc&list=PL6kCEMPsrM7E2zK7TtWAV--UskYKATbVh'
+      },
       {
         title: 'servicesSection.sportsInjury.ankleSprain',
         src: 'https://www.youtube.com/watch?v=B0Cno18Chpc&list=PL6kCEMPsrM7E2zK7TtWAV--UskYKATbVh'

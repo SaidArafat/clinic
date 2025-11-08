@@ -43,6 +43,7 @@ const translations = {
     spineDisorders: 'Spine Disorders',
     neurologicalRehabilitation: 'Neurological Rehabilitation',
     postOrthopedicSurgery: 'Post Orthopedic Surgery',
+    recoverySessions: 'Recovery Sessions',
     sportsInjury: 'Sports Injury',
     lymphaticDrainage: 'Lymphatic Drainage',
     tensionHeadache: 'Tension Headache',
@@ -82,9 +83,11 @@ const translations = {
         title: 'Spine Disorders',
         description:
           'Advanced treatment for spine and back pain using manual therapy and certified spine protocols.',
+        discProlapse: 'Disc Prolapse',
         kyphosis: 'Kyphosis',
         scoliosis: 'Scoliosis',
-        neckPain: 'Neck Pain'
+        neckPain: 'Neck Pain',
+        lowerBackPain: 'Lower Back Pain'
       },
 
       neurologicalRehabilitation: {
@@ -92,14 +95,25 @@ const translations = {
         description:
           'Specialized care for stroke recovery, brain injuries, and nervous system conditions.',
         dropFoot: 'Drop Foot',
-        hemiparesis: 'Hemiparesis'
+        hemiparesis: 'Hemiparesis',
+        paraParaparesis: 'Para Paraparesis'
       },
 
       postOrthopedicSurgery: {
         title: 'Post Orthopedic Surgery',
         description:
           'Rehabilitation programs designed for faster recovery after orthopedic operations.',
-        rehabilitation: 'Rehabilitation',
+        totalKneeReplacement: 'Total knee replacement',
+        rehabilitation: 'A C | Rehabilitation',
+        elbowStiffness: 'Elbow Stiffness'
+      },
+      // added
+      recoverySessions: {
+        title: 'Recovery Sessions',
+        description:
+          'Rehabilitation programs designed for faster recovery after orthopedic operations.',
+        totalKneeReplacement: 'Total knee replacement',
+        rehabilitation: 'A C | Rehabilitation',
         elbowStiffness: 'Elbow Stiffness'
       },
 
@@ -107,9 +121,11 @@ const translations = {
         title: 'Sports Injury',
         description:
           'Professional physiotherapy for sports injuries with focus on safe and quick return to activity.',
+        adductorsStrain: ' Adductors Strain',
         ankleSprain: 'Ankle Sprain',
         shoulderPain: 'Shoulder Pain',
-        meniscusTearDegeneration: 'Meniscus Tear vs. Degeneration'
+        meniscusTearDegeneration:
+          'Difference between meniscus tear and degeneration'
       },
 
       lymphaticDrainage: {
@@ -243,7 +259,8 @@ const translations = {
     spineDisorders: 'اضطرابات العمود الفقري',
     neurologicalRehabilitation: 'تأهيل حالات الأعصاب',
     postOrthopedicSurgery: 'تأهيل جراحات العظام',
-    sportsInjury: 'إصابات الملاعب',
+    recoverySessions: 'جلسات التعافي',
+    sportsInjury: 'الإصابات الرياضية',
     lymphaticDrainage: 'المساج الليمفاوي',
     tensionHeadache: 'الصداع الناتج عن التوتر',
     prenatalPhysicalTherapy: 'تأهيل السيدات الحوامل للولادة الطبيعية',
@@ -282,9 +299,11 @@ const translations = {
         title: 'اضطرابات العمود الفقري',
         description:
           'علاج شامل لآلام العمود الفقري والظهر باستخدام تقنيات العلاج اليدوي المتقدمة وبروتوكولات ميكانيكا العمود الفقري المعتمدة من ألمانيا.',
+        discProlapse: 'انزلاق غضروفي',
         kyphosis: 'الحدبة',
         scoliosis: 'الجنف',
-        neckPain: 'ألم الرقبة'
+        neckPain: 'ألم الرقبة',
+        lowerBackPain: 'ألم أسفل الظهر'
       },
 
       neurologicalRehabilitation: {
@@ -292,24 +311,37 @@ const translations = {
         description:
           'تأهيل عصبي متخصص لحالات ما بعد الجلطات الدماغية، وإصابات الدماغ، واضطرابات الجهاز العصبي.',
         dropFoot: 'هبوط القدم',
-        hemiparesis: 'شلل نصفي'
+        hemiparesis: 'شلل نصفي',
+        paraParaparesis: 'شلل جزئي في الطرفين السفليين'
       },
 
       postOrthopedicSurgery: {
         title: 'تأهيل جراحات العظام',
         description:
           'علاج متخصص لإصابات العظام الناتجة عن العمليات الجراحية مع التركيز على التعافي السريع واستعادة الأداء الكامل.',
+        totalKneeReplacement: 'تأهيل تغيير مفصل الركبة',
+        rehabilitation: 'تأهيل الرابط الصليبي',
+        elbowStiffness: 'تيبس الكوع'
+      },
+
+      recoverySessions: {
+        title: 'جلسات التعافي',
+        description:
+          'علاج متخصص لإصابات العظام الناتجة عن العمليات الجراحية مع التركيز على التعافي السريع واستعادة الأداء الكامل.',
+        totalKneeReplacement: 'تأهيل تغيير مفصل الركبة',
         rehabilitation: 'تأهيل الرابط الصليبي',
         elbowStiffness: 'تيبس الكوع'
       },
 
       sportsInjury: {
-        title: 'إصابات الملاعب',
+        title: 'الإصابات الرياضية',
         description:
           'علاج طبيعي متخصص لإصابات الرياضيين مع التركيز على التعافي الآمن والسريع للعودة للنشاط.',
+        adductorsStrain: 'العضلة الضامة',
         ankleSprain: 'التواء الكاحل',
         shoulderPain: 'ألم الكتف',
-        meniscusTearDegeneration: 'تمزق الغضروف الهلالي أو تآكله'
+        meniscusTearDegeneration:
+          'الفرق بين اصابات غضروف الركبة وبين تآكل غضروف الركبة (الخشونة)        '
       },
 
       lymphaticDrainage: {

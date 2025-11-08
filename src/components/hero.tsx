@@ -10,7 +10,8 @@ import {
   prenatalPhysicalTherapy,
   spineDisorders,
   sportsInjury,
-  tensionHeadache
+  tensionHeadache,
+  recoverySessions
 } from '@/lib/icons'
 import { scrollToSection } from '@/lib/utils'
 import { ImageWithFallback } from './fallback-images/image-with-fallback'
@@ -82,6 +83,10 @@ export function Hero() {
                 {
                   name: t('postOrthopedicSurgery'),
                   icon: postOrthopedicSurgery
+                },
+                {
+                  name: t('recoverySessions'),
+                  icon: recoverySessions
                 },
                 { name: t('sportsInjury'), icon: sportsInjury },
                 { name: t('lymphaticDrainage'), icon: lymphaticDrainage },

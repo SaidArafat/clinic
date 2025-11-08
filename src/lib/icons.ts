@@ -1,6 +1,7 @@
 import spineDisorders from '../assets/spine-disorders.png'
 import neurologicalRehabilitation from '../assets/neurological-rehab.png'
 import postOrthopedicSurgery from '../assets/post-orthopedic-surgery.png'
+import recoverySessions from '../assets/recovery-sessions.png'
 import sportsInjury from '../assets/sports-injury.png'
 import lymphaticDrainage from '../assets/lymphatic-drainage.png'
 import tensionHeadache from '../assets/tension-headache.png'
@@ -15,6 +16,7 @@ export {
   neuroService,
   spineDisorders,
   neurologicalRehabilitation,
+  recoverySessions,
   postOrthopedicSurgery,
   lymphaticDrainage,
   tensionHeadache,
