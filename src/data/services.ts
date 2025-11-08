@@ -20,8 +20,14 @@ export const services = [
     treatments: [
       // added: done
       {
-        title: 'servicesSection.spineDisorders.discProlapse',
+        title:
+          'servicesSection.spineDisorders.muscleKnotsDiscHerniationAndSciatica',
         src: 'https://youtube.com/shorts/QmnV0ZamM6U?feature=share'
+      },
+      {
+        title: 'servicesSection.spineDisorders.discProlapse',
+        // src: 'https://youtube.com/shorts/QmnV0ZamM6U?feature=share'
+        src: null
       },
       {
         title: 'servicesSection.spineDisorders.kyphosis',
@@ -38,7 +44,7 @@ export const services = [
       // added
       {
         title: 'servicesSection.spineDisorders.lowerBackPain',
-        src: 'https://www.youtube.com/watch?v=Mzt3H3B9-S0&list=PL6kCEMPsrM7GzPMQ5G8f2_D7B_gYZFGC5'
+        src: null
       }
     ],
     hasVideo: true,
@@ -64,7 +70,7 @@ export const services = [
       // added
       {
         title: 'servicesSection.neurologicalRehabilitation.paraParaparesis',
-        src: 'https://www.youtube.com/watch?v=ScJAAG_T2sU&list=PL6kCEMPsrM7F8Pl2mJdPNhANnowXXUWNu'
+        src: null
       }
     ],
     hasVideo: true,
@@ -108,10 +114,10 @@ export const services = [
       // added
       {
         title: 'servicesSection.recoverySessions.title',
-        src: 'https://www.youtube.com/watch?v=YkY-nceZAoQ&list=PL6kCEMPsrM7E-O4f6NcACyRr99Cs45zix'
+        src: null
       }
     ],
-    hasVideo: true,
+    hasVideo: false,
     video:
       'https://www.youtube.com/watch?v=YkY-nceZAoQ&list=PL6kCEMPsrM7E-O4f6NcACyRr99Cs45zix'
   },

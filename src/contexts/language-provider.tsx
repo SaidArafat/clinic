@@ -70,6 +70,26 @@ const translations = {
       successRate: 'Success Rate'
     },
 
+    // Certifications
+    certifications: {
+      'german-certification': {
+        title: 'German Certification',
+        subtitle: 'Spine Mechanics'
+      },
+      'manual-therapy': {
+        title: 'Manual Therapy',
+        subtitle: 'Advanced Level'
+      },
+      'neurological-rehabilitation': {
+        title: 'Neurological Rehabilitation',
+        subtitle: 'Specialist'
+      },
+      'sports-medicine': {
+        title: 'Sports Medicine',
+        subtitle: 'Certified'
+      }
+    },
+
     // Services
     ourServices: 'Our Services',
     servicesDescription:
@@ -83,6 +103,8 @@ const translations = {
         title: 'Spine Disorders',
         description:
           'Advanced treatment for spine and back pain using manual therapy and certified spine protocols.',
+        muscleKnotsDiscHerniationAndSciatica:
+          'Muscle knots, disc herniation, and sciatica',
         discProlapse: 'Disc Prolapse',
         kyphosis: 'Kyphosis',
         scoliosis: 'Scoliosis',
@@ -287,6 +309,26 @@ const translations = {
       successRate: 'نسبة النجاح'
     },
 
+    // Certifications
+    certifications: {
+      'german-certification': {
+        title: 'الشهادة ألمانية',
+        subtitle: 'ميكانيكا العمود الفقري'
+      },
+      'manual-therapy': {
+        title: 'العلاج اليدوي',
+        subtitle: 'المستوى المتقدم'
+      },
+      'neurological-rehabilitation': {
+        title: 'إعادة التأهيل العصبي',
+        subtitle: 'متخصص'
+      },
+      'sports-medicine': {
+        title: 'الطب الرياضي',
+        subtitle: 'معتمد'
+      }
+    },
+
     // Services
     ourServices: 'خدماتنا',
     servicesDescription: 'خدمات علاج طبيعي شاملة مع أكثر من 25 عاماً من الخبرة',
@@ -299,6 +341,8 @@ const translations = {
         title: 'اضطرابات العمود الفقري',
         description:
           'علاج شامل لآلام العمود الفقري والظهر باستخدام تقنيات العلاج اليدوي المتقدمة وبروتوكولات ميكانيكا العمود الفقري المعتمدة من ألمانيا.',
+        muscleKnotsDiscHerniationAndSciatica:
+          'العقد العضلية والديسك وعرق النسا',
         discProlapse: 'انزلاق غضروفي',
         kyphosis: 'الحدبة',
         scoliosis: 'الجنف',

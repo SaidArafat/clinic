@@ -12,6 +12,7 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
 import { useLanguage } from '@/contexts'
+import { cn } from '@/lib/utils'
 import { ChevronLeft, ChevronRight, Plus, Star, User } from 'lucide-react'
 import { useState } from 'react'
 import { toast } from 'sonner'
@@ -26,7 +27,7 @@ interface Review {
 }
 
 export function Reviews() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
   const [currentReview, setCurrentReview] = useState(0)
   const [isDialogOpen, setIsDialogOpen] = useState(false)
   const [newReview, setNewReview] = useState({
@@ -709,7 +710,9 @@ export function Reviews() {
             onClick={prevReview}
             className="absolute start-4 top-1/2 transform -translate-y-1/2 w-10 h-10 p-0 rounded-full"
           >
-            <ChevronLeft className="w-4 h-4" />
+            <ChevronLeft
+              className={cn('w-4 h-4', language === 'ar' && 'rotate-180')}
+            />
           </Button>
 
           <Button
@@ -718,7 +721,9 @@ export function Reviews() {
             onClick={nextReview}
             className="absolute end-4 top-1/2 transform -translate-y-1/2 w-10 h-10 p-0 rounded-full"
           >
-            <ChevronRight className="w-4 h-4" />
+            <ChevronRight
+              className={cn('w-4 h-4', language === 'ar' && 'rotate-180')}
+            />
           </Button>
 
           {/* Dots Indicator */}
@@ -738,7 +743,7 @@ export function Reviews() {
         {/* Overall Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
           <div className="text-center p-6 bg-card rounded-lg border border-border">
-            <div className="text-3xl font-bold text-foreground">4.9/5</div>
+            <div className="text-3xl font-bold text-foreground">4.6/5</div>
             <div className="text-sm text-muted-foreground">Average Rating</div>
             <StarRating rating={5} />
           </div>

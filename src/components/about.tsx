@@ -96,33 +96,46 @@ export function About() {
               </div>
             </div>
 
-            {/* Certifications showcase */}
+            {/* Certifications */}
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-card p-4 rounded-lg border border-border text-center">
                 <Award className="w-8 h-8 text-primary mx-auto mb-2" />
-                <div className="font-medium text-sm">German Certification</div>
+                <div className="font-medium text-sm">
+                  {t('certifications.german-certification.title')}
+                </div>
                 <div className="text-xs text-muted-foreground">
-                  Spine Mechanics
+                  {t('certifications.german-certification.subtitle')}
                 </div>
               </div>
+
               <div className="bg-card p-4 rounded-lg border border-border text-center">
                 <CheckCircle className="w-8 h-8 text-green-500 mx-auto mb-2" />
-                <div className="font-medium text-sm">Manual Therapy</div>
+                <div className="font-medium text-sm">
+                  {t('certifications.manual-therapy.title')}
+                </div>
                 <div className="text-xs text-muted-foreground">
-                  Advanced Level
+                  {t('certifications.manual-therapy.subtitle')}
                 </div>
               </div>
+
               <div className="bg-card p-4 rounded-lg border border-border text-center">
                 <Users className="w-8 h-8 text-blue-500 mx-auto mb-2" />
                 <div className="font-medium text-sm">
-                  Neurological Rehabilitation
+                  {t('certifications.neurological-rehabilitation.title')}
                 </div>
-                <div className="text-xs text-muted-foreground">Specialist</div>
+                <div className="text-xs text-muted-foreground">
+                  {t('certifications.neurological-rehabilitation.subtitle')}
+                </div>
               </div>
+
               <div className="bg-card p-4 rounded-lg border border-border text-center">
                 <Clock className="w-8 h-8 text-orange-500 mx-auto mb-2" />
-                <div className="font-medium text-sm">Sports Medicine</div>
-                <div className="text-xs text-muted-foreground">Certified</div>
+                <div className="font-medium text-sm">
+                  {t('certifications.sports-medicine.title')}
+                </div>
+                <div className="text-xs text-muted-foreground">
+                  {t('certifications.sports-medicine.subtitle')}
+                </div>
               </div>
             </div>
           </div>

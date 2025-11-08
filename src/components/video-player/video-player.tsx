@@ -38,7 +38,9 @@ export default function VideoPlayer({
         onCloseAutoFocus={e => e.preventDefault()}
       >
         <DialogHeader>
-          <DialogTitle className="text-base -mt-2">{title}</DialogTitle>
+          <DialogTitle className="text-xs md:text-base -mt-2">
+            {title}
+          </DialogTitle>
           <DialogDescription className="sr-only">
             vide player about dr Ashraf
           </DialogDescription>
