@@ -1,5 +1,3 @@
-import ReactPlayer from 'react-player'
-
 import { Button } from '@/components/ui/button'
 import {
   Dialog,
@@ -27,6 +25,11 @@ export default function VideoPlayer({
     return null
   }
 
+  // const submittedUrl = `${src}?enablejsapi=1&origin=https://example.com/`
+  const submittedUrl = `${src}?enablejsapi=1&origin=https://drashrafkotob.github.io/`
+
+  console.log(submittedUrl)
+
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild className="sr-only">
@@ -46,7 +49,15 @@ export default function VideoPlayer({
           </DialogDescription>
         </DialogHeader>
         <main>
-          <ReactPlayer src={src} width="100%" height="20rem" controls />
+          <iframe
+            width="100%"
+            className="h-96"
+            src={submittedUrl}
+            // src="https://www.youtube.com/embed/62kErCeG2rI?enablejsapi=1&origin=https://example.com/"
+            // src="https://www.youtube.com/embed/62kErCeG2rI?enablejsapi=1&origin=https://example.com/"
+            // src="https://youtube.com/embed/5i9SzaumaRg?enablejsapi=1&origin=https://example.com/"
+            allowFullScreen
+          ></iframe>
         </main>
       </DialogContent>
     </Dialog>

@@ -19,37 +19,31 @@ export const services = [
     description: 'servicesSection.spineDisorders.description',
     treatments: [
       // added: done
+      // todo add here  servicesSection.spineDisorders.lowerBackPain
+      {
+        title: 'servicesSection.spineDisorders.discProlapse',
+        src: 'https://www.youtube.com/embed/HVIKGZz-npU'
+      },
       {
         title:
           'servicesSection.spineDisorders.muscleKnotsDiscHerniationAndSciatica',
-        src: 'https://youtube.com/shorts/QmnV0ZamM6U?feature=share'
-      },
-      {
-        title: 'servicesSection.spineDisorders.discProlapse',
-        // src: 'https://youtube.com/shorts/QmnV0ZamM6U?feature=share'
-        src: null
+        src: 'https://www.youtube.com/embed/QmnV0ZamM6U'
       },
       {
         title: 'servicesSection.spineDisorders.kyphosis',
-        src: 'https://www.youtube.com/watch?v=DCfWhOCqrJ4&list=PL6kCEMPsrM7GzPMQ5G8f2_D7B_gYZFGC5'
+        src: 'https://www.youtube.com/embed/DCfWhOCqrJ4'
       },
       {
         title: 'servicesSection.spineDisorders.scoliosis',
-        src: 'https://www.youtube.com/watch?v=ZsasorS07CI&list=PL6kCEMPsrM7GzPMQ5G8f2_D7B_gYZFGC5'
+        src: 'https://www.youtube.com/embed/ZsasorS07CI'
       },
       {
         title: 'servicesSection.spineDisorders.neckPain',
-        src: 'https://www.youtube.com/watch?v=Mzt3H3B9-S0&list=PL6kCEMPsrM7GzPMQ5G8f2_D7B_gYZFGC5'
-      },
-      // added
-      {
-        title: 'servicesSection.spineDisorders.lowerBackPain',
-        src: null
+        src: 'https://www.youtube.com/embed/Mzt3H3B9-S0'
       }
     ],
     hasVideo: true,
-    video:
-      'https://www.youtube.com/watch?v=DCfWhOCqrJ4&list=PL6kCEMPsrM7GzPMQ5G8f2_D7B_gYZFGC5'
+    video: 'https://www.youtube.com/embed/DCfWhOCqrJ4'
   },
   {
     id: 'neurological-rehabilitation',
@@ -61,11 +55,11 @@ export const services = [
     treatments: [
       {
         title: 'servicesSection.neurologicalRehabilitation.dropFoot',
-        src: 'https://www.youtube.com/watch?v=g6m89gypafs&list=PL6kCEMPsrM7F8Pl2mJdPNhANnowXXUWNu'
+        src: 'https://www.youtube.com/embed/g6m89gypafs'
       },
       {
         title: 'servicesSection.neurologicalRehabilitation.hemiparesis',
-        src: 'https://www.youtube.com/watch?v=ScJAAG_T2sU&list=PL6kCEMPsrM7F8Pl2mJdPNhANnowXXUWNu'
+        src: 'https://www.youtube.com/embed/ScJAAG_T2sU'
       },
       // added
       {
@@ -74,8 +68,7 @@ export const services = [
       }
     ],
     hasVideo: true,
-    video:
-      'https://www.youtube.com/watch?v=g6m89gypafs&list=PL6kCEMPsrM7F8Pl2mJdPNhANnowXXUWNu'
+    video: 'https://www.youtube.com/embed/g6m89gypafs'
   },
   {
     id: 'post-orthopedic-surgery',
@@ -86,22 +79,22 @@ export const services = [
     description: 'servicesSection.postOrthopedicSurgery.description',
     treatments: [
       // added
-      {
-        title: 'servicesSection.postOrthopedicSurgery.totalKneeReplacement',
-        src: 'https://www.youtube.com/watch?v=YkY-nceZAoQ&list=PL6kCEMPsrM7E-O4f6NcACyRr99Cs45zix'
-      },
+
       {
         title: 'servicesSection.postOrthopedicSurgery.rehabilitation',
-        src: 'https://www.youtube.com/watch?v=YkY-nceZAoQ&list=PL6kCEMPsrM7E-O4f6NcACyRr99Cs45zix'
+        src: 'https://www.youtube.com/embed/YkY-nceZAoQ'
       },
       {
         title: 'servicesSection.postOrthopedicSurgery.elbowStiffness',
-        src: 'https://www.youtube.com/watch?v=t6xsAt8xyBI&list=PL6kCEMPsrM7E-O4f6NcACyRr99Cs45zix'
+        src: 'https://www.youtube.com/embed/t6xsAt8xyBI'
+      },
+      {
+        title: 'servicesSection.postOrthopedicSurgery.totalKneeReplacement',
+        src: null
       }
     ],
     hasVideo: true,
-    video:
-      'https://www.youtube.com/watch?v=YkY-nceZAoQ&list=PL6kCEMPsrM7E-O4f6NcACyRr99Cs45zix'
+    video: 'https://www.youtube.com/embed/YkY-nceZAoQ'
   },
   {
     id: 'recovery-sessions.',
@@ -118,8 +111,7 @@ export const services = [
       }
     ],
     hasVideo: false,
-    video:
-      'https://www.youtube.com/watch?v=YkY-nceZAoQ&list=PL6kCEMPsrM7E-O4f6NcACyRr99Cs45zix'
+    video: 'https://www.youtube.com/embed/YkY-nceZAoQ'
   },
   {
     id: 'sports-injury',
@@ -129,27 +121,26 @@ export const services = [
       'https://images.pexels.com/photos/20860603/pexels-photo-20860603.jpeg?_gl=1*1pgu867*_ga*MTQ2MTY5OTkwNS4xNzYxOTkxODk3*_ga_8JE65Q40S6*czE3NjE5OTE4OTYkbzEkZzEkdDE3NjE5OTE5NzQkajU5JGwwJGgw',
     description: 'servicesSection.sportsInjury.description',
     treatments: [
-      // added
-      {
-        title: 'servicesSection.sportsInjury.adductorsStrain',
-        src: 'https://www.youtube.com/watch?v=B0Cno18Chpc&list=PL6kCEMPsrM7E2zK7TtWAV--UskYKATbVh'
-      },
       {
         title: 'servicesSection.sportsInjury.ankleSprain',
-        src: 'https://www.youtube.com/watch?v=B0Cno18Chpc&list=PL6kCEMPsrM7E2zK7TtWAV--UskYKATbVh'
+        src: 'https://www.youtube.com/embed/B0Cno18Chpc'
       },
       {
         title: 'servicesSection.sportsInjury.shoulderPain',
-        src: 'https://www.youtube.com/watch?v=8W2_pXkd_Ck&list=PL6kCEMPsrM7E2zK7TtWAV--UskYKATbVh'
+        src: 'https://www.youtube.com/embed/8W2_pXkd_Ck'
       },
       {
         title: 'servicesSection.sportsInjury.meniscusTearDegeneration',
-        src: 'https://www.youtube.com/watch?v=7Gv9V1Ao5vI&list=PL6kCEMPsrM7E2zK7TtWAV--UskYKATbVh'
+        src: 'https://www.youtube.com/embed/7Gv9V1Ao5vI'
+      },
+      // added
+      {
+        title: 'servicesSection.sportsInjury.adductorsStrain',
+        src: null
       }
     ],
     hasVideo: true,
-    video:
-      'https://www.youtube.com/watch?v=B0Cno18Chpc&list=PL6kCEMPsrM7E2zK7TtWAV--UskYKATbVh'
+    video: 'https://www.youtube.com/embed/B0Cno18Chpc'
   },
   {
     id: 'lymphatic-drainage',
@@ -161,12 +152,11 @@ export const services = [
     treatments: [
       {
         title: 'servicesSection.lymphaticDrainage.lymphaticDrainage',
-        src: 'https://www.youtube.com/watch?v=uRJZ_vH0rZY&list=PL6kCEMPsrM7GjaeVBfZzEoc4tNVVEi2R5'
+        src: 'https://www.youtube.com/embed/uRJZ_vH0rZY'
       }
     ],
     hasVideo: true,
-    video:
-      'https://www.youtube.com/watch?v=uRJZ_vH0rZY&list=PL6kCEMPsrM7GjaeVBfZzEoc4tNVVEi2R5'
+    video: 'https://www.youtube.com/embed/uRJZ_vH0rZY'
   },
   {
     id: 'tension-headache',
@@ -178,12 +168,11 @@ export const services = [
     treatments: [
       {
         title: 'servicesSection.tensionHeadache.tensionHeadache',
-        src: 'https://www.youtube.com/watch?v=5i1M6pql3WA&list=PL6kCEMPsrM7FSFUvvTe9vrbNCqeKgm6-K'
+        src: 'https://www.youtube.com/embed/5i1M6pql3WA'
       }
     ],
     hasVideo: true,
-    video:
-      'https://www.youtube.com/watch?v=5i1M6pql3WA&list=PL6kCEMPsrM7FSFUvvTe9vrbNCqeKgm6-K'
+    video: 'https://www.youtube.com/embed/5i1M6pql3WA'
   },
   {
     id: 'prenatal-physical-therapy',
@@ -196,11 +185,10 @@ export const services = [
       {
         title:
           'servicesSection.prenatalPhysicalTherapy.prenatalPhysicalTherapy',
-        src: 'https://www.youtube.com/watch?v=TWOyVBAMSB0&list=PL6kCEMPsrM7EtiHOEjJVGWDhH5hU_H24d'
+        src: 'https://www.youtube.com/embed/TWOyVBAMSB0'
       }
     ],
     hasVideo: true,
-    video:
-      'https://www.youtube.com/watch?v=TWOyVBAMSB0&list=PL6kCEMPsrM7EtiHOEjJVGWDhH5hU_H24d'
+    video: 'https://www.youtube.com/embed/TWOyVBAMSB0'
   }
 ]

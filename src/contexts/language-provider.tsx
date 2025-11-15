@@ -100,12 +100,12 @@ const translations = {
       videos: 'Videos',
 
       spineDisorders: {
-        title: 'Spine Disorders',
+        title: 'Lower back pain  and disc prolapse',
         description:
           'Advanced treatment for spine and back pain using manual therapy and certified spine protocols.',
         muscleKnotsDiscHerniationAndSciatica:
           'Muscle knots, disc herniation, and sciatica',
-        discProlapse: 'Disc Prolapse',
+        discProlapse: 'Lower back pain  and disc prolapse',
         kyphosis: 'Kyphosis',
         scoliosis: 'Scoliosis',
         neckPain: 'Neck Pain',
@@ -184,8 +184,8 @@ const translations = {
     workingHours: 'Working Hours',
     locationZayed: 'Sheikh Zayed Branch',
     location6Oct: '6th October - Cairo Medical Center',
-    workingHoursWeekdays: 'Saturday - Thursday: 9:00 AM - 9:00 PM',
-    workingHoursFriday: 'Friday: 2:00 PM - 9:00 PM',
+    workingHoursWeekdays: 'Saturday - Thursday: 5:00 PM - 11:00 PM',
+    workingHoursFriday: 'Friday: Closed',
     locationTitle: 'Location',
     googleMaps: 'Google Maps Integration',
     branch6Oct: '6th October Branch',
@@ -343,11 +343,12 @@ const translations = {
           'علاج شامل لآلام العمود الفقري والظهر باستخدام تقنيات العلاج اليدوي المتقدمة وبروتوكولات ميكانيكا العمود الفقري المعتمدة من ألمانيا.',
         muscleKnotsDiscHerniationAndSciatica:
           'العقد العضلية والديسك وعرق النسا',
-        discProlapse: 'انزلاق غضروفي',
+        // discProlapse: 'انزلاق غضروفي',
+        discProlapse: 'لآلام العمود الفقري والمفاصل',
         kyphosis: 'الحدبة',
         scoliosis: 'الجنف',
-        neckPain: 'ألم الرقبة',
-        lowerBackPain: 'ألم أسفل الظهر'
+        neckPain: 'ألم الرقبة'
+        // lowerBackPain: 'لآلام العمود الفقري والمفاصل'
       },
 
       neurologicalRehabilitation: {
@@ -423,8 +424,8 @@ const translations = {
     workingHours: 'ساعات العمل',
     locationZayed: 'فرع الشيخ زايد',
     location6Oct: '6 أكتوبر - كايرو ميديكال سنتر',
-    workingHoursWeekdays: 'السبت - الخميس: 9:00 ص - 9:00 م',
-    workingHoursFriday: 'الجمعة: 2:00 م - 9:00 م',
+    workingHoursWeekdays: 'السبت - الخميس: 5:00 م - 11:00 م',
+    workingHoursFriday: 'الجمعة: مغلق',
     locationTitle: 'الموقع',
     googleMaps: 'خرائط جوجل',
     branch6Oct: 'فرع 6 أكتوبر',
