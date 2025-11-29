@@ -1,6 +1,7 @@
 import { ArrowDown, Play } from 'lucide-react'
 
 import heroImage from '@/assets/hero-image.jpg'
+import { ImageWithFallback } from '@/components/fallback-images/image-with-fallback'
 import { Button } from '@/components/ui/button'
 import { useLanguage, useVideoPlayer } from '@/contexts'
 import {
@@ -8,13 +9,12 @@ import {
   neurologicalRehabilitation,
   postOrthopedicSurgery,
   prenatalPhysicalTherapy,
+  recoverySessions,
   spineDisorders,
   sportsInjury,
-  tensionHeadache,
-  recoverySessions
+  tensionHeadache
 } from '@/lib/icons'
 import { scrollToSection } from '@/lib/utils'
-import { ImageWithFallback } from './fallback-images/image-with-fallback'
 
 export function Hero() {
   const { t } = useLanguage()
@@ -38,15 +38,15 @@ export function Hero() {
             <div className="space-y-4">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
                 <span className="w-2 h-2 bg-green-500 rounded-full me-2 animate-pulse"></span>
-                {t('consultantPhysiotherapist')}
+                {t('hero.heading.subtitle')}
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                {t('heroTitle')}
+                {t('hero.heading.title')}
               </h1>
 
               <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl">
-                {t('heroDescription')}
+                {t('hero.heading.description')}
               </p>
             </div>
 
@@ -57,7 +57,7 @@ export function Hero() {
                 size="lg"
                 className="px-8 py-6 text-lg h-auto"
               >
-                {t('contactUs')}
+                {t('shared.actions.contactUs')}
                 <ArrowDown className="ms-2 h-5 w-5" />
               </Button>
 
@@ -68,31 +68,43 @@ export function Hero() {
                 className="px-8 py-6 text-lg h-auto"
               >
                 <Play className="me-2 h-5 w-5" />
-                {t('ourMainServices')}
+                {t('shared.highlights.mainServices')}
               </Button>
             </div>
 
             {/* Quick Services */}
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {[
-                { name: t('spineDisorders'), icon: spineDisorders },
                 {
-                  name: t('neurologicalRehabilitation'),
+                  name: t('services.sections.spineDisorders.title'),
+                  icon: spineDisorders
+                },
+                {
+                  name: t('services.sections.neurologicalRehabilitation.title'),
                   icon: neurologicalRehabilitation
                 },
                 {
-                  name: t('postOrthopedicSurgery'),
+                  name: t('services.sections.postOrthopedicSurgery.title'),
                   icon: postOrthopedicSurgery
                 },
                 {
-                  name: t('recoverySessions'),
+                  name: t('services.sections.recoverySessions.title'),
                   icon: recoverySessions
                 },
-                { name: t('sportsInjury'), icon: sportsInjury },
-                { name: t('lymphaticDrainage'), icon: lymphaticDrainage },
-                { name: t('tensionHeadache'), icon: tensionHeadache },
                 {
-                  name: t('prenatalPhysicalTherapy'),
+                  name: t('services.sections.sportsInjury.title'),
+                  icon: sportsInjury
+                },
+                {
+                  name: t('services.sections.lymphaticDrainage.title'),
+                  icon: lymphaticDrainage
+                },
+                {
+                  name: t('services.sections.tensionHeadache.title'),
+                  icon: tensionHeadache
+                },
+                {
+                  name: t('services.sections.prenatalPhysicalTherapy.title'),
                   icon: prenatalPhysicalTherapy
                 }
               ].map((service, index) => (
@@ -131,7 +143,7 @@ export function Hero() {
                 <button
                   onClick={() =>
                     openVideo({
-                      title: t('heroDescription'),
+                      title: t('hero.heading.description'),
                       src: 'https://www.youtube.com/embed/62kErCeG2rI'
                     })
                   }
@@ -146,7 +158,7 @@ export function Hero() {
               {/* Experience badge */}
               <div className="absolute -bottom-4 -end-4 bg-primary text-primary-foreground rounded-2xl p-4 shadow-lg">
                 <div className="text-2xl font-bold">25+</div>
-                <div className="text-sm">{t('years')}</div>
+                <div className="text-sm">{t('shared.highlights.years')}</div>
               </div>
             </div>
           </div>

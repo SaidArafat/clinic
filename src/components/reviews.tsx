@@ -1,3 +1,7 @@
+import { ChevronLeft, ChevronRight, Plus, Star, User } from 'lucide-react'
+import { useState } from 'react'
+import { toast } from 'sonner'
+
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import {
@@ -13,9 +17,6 @@ import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
 import { useLanguage } from '@/contexts'
 import { cn } from '@/lib/utils'
-import { ChevronLeft, ChevronRight, Plus, Star, User } from 'lucide-react'
-import { useState } from 'react'
-import { toast } from 'sonner'
 
 interface Review {
   id: number
@@ -558,7 +559,7 @@ export function Reviews() {
       verified: true
     })
     setIsDialogOpen(false)
-    toast.success(t('feedbackSuccess'))
+    toast.success(t('reviews.form.success'))
   }
 
   const handleRatingClick = (rating: number) => {
@@ -597,10 +598,10 @@ export function Reviews() {
         {/* Section Header */}
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            {t('patientReviews')}
+            {t('reviews.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-            {t('reviewsDescription')}
+            {t('reviews.description')}
           </p>
 
           {/* Add Review Button */}
@@ -608,30 +609,32 @@ export function Reviews() {
             <DialogTrigger asChild>
               <Button size="lg" className="px-8 py-6 text-lg h-auto">
                 <Plus className="me-2 h-5 w-5" />
-                {t('addFeedback')}
+                {t('reviews.cta.addFeedback')}
               </Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-md">
               <DialogHeader>
-                <DialogTitle>{t('addFeedback')}</DialogTitle>
+                <DialogTitle>{t('reviews.cta.addFeedback')}</DialogTitle>
                 <DialogDescription></DialogDescription>
               </DialogHeader>
               <form onSubmit={handleSubmitReview} className="space-y-4">
                 <div>
-                  <Label htmlFor="name">{t('yourName')}*</Label>
+                  <Label htmlFor="name">
+                    {t('reviews.form.fields.nameLabel')}*
+                  </Label>
                   <Input
                     id="name"
                     value={newReview.name}
                     onChange={e =>
                       setNewReview(prev => ({ ...prev, name: e.target.value }))
                     }
-                    placeholder={t('namePlaceholder')}
+                    placeholder={t('reviews.form.fields.namePlaceholder')}
                     required
                   />
                 </div>
 
                 <div>
-                  <Label>{t('yourRating')}</Label>
+                  <Label>{t('reviews.form.fields.ratingLabel')}</Label>
                   <StarRating
                     rating={newReview.rating}
                     interactive
@@ -640,7 +643,9 @@ export function Reviews() {
                 </div>
 
                 <div>
-                  <Label htmlFor="review">{t('yourReview')}*</Label>
+                  <Label htmlFor="review">
+                    {t('reviews.form.fields.reviewLabel')}*
+                  </Label>
                   <Textarea
                     id="review"
                     value={newReview.review}
@@ -650,14 +655,14 @@ export function Reviews() {
                         review: e.target.value
                       }))
                     }
-                    placeholder={t('feedbackPlaceholder')}
+                    placeholder={t('reviews.form.fields.reviewPlaceholder')}
                     rows={4}
                     required
                   />
                 </div>
 
                 <Button type="submit" className="w-full">
-                  {t('submitFeedback')}
+                  {t('reviews.form.submit')}
                 </Button>
               </form>
             </DialogContent>

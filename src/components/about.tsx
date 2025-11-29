@@ -1,16 +1,17 @@
-import { useLanguage } from '@/contexts'
 import { Award, CheckCircle, Clock, Users } from 'lucide-react'
+
 import { ImageWithFallback } from '@/components/fallback-images/image-with-fallback'
+import { useLanguage, type TranslationKey } from '@/contexts'
 
 export function About() {
   const { t } = useLanguage()
 
   const qualifications = [
-    t('qualification1'),
-    t('qualification2'),
-    t('qualification3'),
-    t('qualification4'),
-    t('qualification5')
+    t('about.qualifications.items.advancedManualTherapy'),
+    t('about.qualifications.items.germanCertification'),
+    t('about.qualifications.items.clinicalExperience'),
+    t('about.qualifications.items.neuroExpert'),
+    t('about.qualifications.items.sportsRehab')
   ]
 
   const stats = [
@@ -26,10 +27,10 @@ export function About() {
         {/* Section Header */}
         <div className="text-center mb-6">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            {t('aboutDrAshraf')}
+            {t('about.heading.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            {t('aboutDescription')}
+            {t('about.heading.description')}
           </p>
         </div>
 
@@ -39,7 +40,7 @@ export function About() {
             {/* Qualifications */}
             <div>
               <h3 className="text-2xl font-bold text-foreground mb-6">
-                {t('keyQualifications')}
+                {t('about.qualifications.title')}
               </h3>
               <ul className="space-y-4">
                 {qualifications.map((qualification, index) => (
@@ -56,10 +57,10 @@ export function About() {
             {/* Philosophy */}
             <div>
               <h3 className="text-2xl font-bold text-foreground mb-4">
-                {t('treatmentPhilosophy')}
+                {t('about.philosophy.title')}
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                {t('philosophyDescription')}
+                {t('about.philosophy.description')}
               </p>
             </div>
 
@@ -75,7 +76,7 @@ export function About() {
                     {stat.value}
                   </div>
                   <div className="text-sm text-muted-foreground">
-                    {t(`stats.${stat.key}`)}
+                    {t(`about.stats.${stat.key}` as TranslationKey)}
                   </div>
                 </div>
               ))}
@@ -101,40 +102,42 @@ export function About() {
               <div className="bg-card p-4 rounded-lg border border-border text-center">
                 <Award className="w-8 h-8 text-primary mx-auto mb-2" />
                 <div className="font-medium text-sm">
-                  {t('certifications.german-certification.title')}
+                  {t('about.certifications.german-certification.title')}
                 </div>
                 <div className="text-xs text-muted-foreground">
-                  {t('certifications.german-certification.subtitle')}
+                  {t('about.certifications.german-certification.subtitle')}
                 </div>
               </div>
 
               <div className="bg-card p-4 rounded-lg border border-border text-center">
                 <CheckCircle className="w-8 h-8 text-green-500 mx-auto mb-2" />
                 <div className="font-medium text-sm">
-                  {t('certifications.manual-therapy.title')}
+                  {t('about.certifications.manual-therapy.title')}
                 </div>
                 <div className="text-xs text-muted-foreground">
-                  {t('certifications.manual-therapy.subtitle')}
+                  {t('about.certifications.manual-therapy.subtitle')}
                 </div>
               </div>
 
               <div className="bg-card p-4 rounded-lg border border-border text-center">
                 <Users className="w-8 h-8 text-blue-500 mx-auto mb-2" />
                 <div className="font-medium text-sm">
-                  {t('certifications.neurological-rehabilitation.title')}
+                  {t('about.certifications.neurological-rehabilitation.title')}
                 </div>
                 <div className="text-xs text-muted-foreground">
-                  {t('certifications.neurological-rehabilitation.subtitle')}
+                  {t(
+                    'about.certifications.neurological-rehabilitation.subtitle'
+                  )}
                 </div>
               </div>
 
               <div className="bg-card p-4 rounded-lg border border-border text-center">
                 <Clock className="w-8 h-8 text-orange-500 mx-auto mb-2" />
                 <div className="font-medium text-sm">
-                  {t('certifications.sports-medicine.title')}
+                  {t('about.certifications.sports-medicine.title')}
                 </div>
                 <div className="text-xs text-muted-foreground">
-                  {t('certifications.sports-medicine.subtitle')}
+                  {t('about.certifications.sports-medicine.subtitle')}
                 </div>
               </div>
             </div>

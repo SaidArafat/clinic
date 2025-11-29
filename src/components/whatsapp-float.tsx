@@ -1,11 +1,12 @@
 'use client'
+import { MapPin, MessageCircle, X } from 'lucide-react'
 import { useState } from 'react'
+
+import { useLanguage } from '@/contexts'
+import { cn } from '@/lib/utils'
 
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { useLanguage } from '@/contexts'
-import { cn } from '@/lib/utils'
-import { MapPin, MessageCircle, X } from 'lucide-react'
 
 export function WhatsAppFloat() {
   const [isOpen, setIsOpen] = useState(false)
@@ -15,14 +16,14 @@ export function WhatsAppFloat() {
   const locations = [
     {
       id: 'zayed',
-      name: t('sheikhZayedClinic'),
+      name: t('shared.clinics.sheikhZayed'),
       phone: '+201069494211',
       address: 'Sheikh Zayed City, Giza',
       priority: 1
     },
     {
       id: 'october',
-      name: t('sixthOctoberClinic'),
+      name: t('shared.clinics.sixthOctober'),
       phone: '+201008009763',
       address: '6th October - Cairo Medical Center',
       priority: 2
@@ -57,7 +58,7 @@ export function WhatsAppFloat() {
               <CardHeader className="pb-3">
                 <div className="flex items-center justify-between">
                   <CardTitle className="text-lg text-green-600 dark:text-green-400">
-                    {t('contactViaWhatsApp')}
+                    {t('whatsapp.heading')}
                   </CardTitle>
                   <button
                     onClick={() => setIsOpen(false)}
@@ -67,7 +68,7 @@ export function WhatsAppFloat() {
                   </button>
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  {t('chooseClinic')}
+                  {t('whatsapp.chooseClinic')}
                 </p>
               </CardHeader>
 
@@ -91,7 +92,7 @@ export function WhatsAppFloat() {
                             </h3>
                             {location.priority === 1 && (
                               <span className="bg-primary text-center text-primary-foreground text-xs px-2 py-0.5 rounded-full">
-                                {t('mainBranch')}
+                                {t('shared.clinics.mainBranch')}
                               </span>
                             )}
                           </div>
@@ -99,7 +100,7 @@ export function WhatsAppFloat() {
                             {location.address}
                           </p>
                           <p className="text-xs text-green-600 dark:text-green-400 font-medium">
-                            {t('clickToStart')}
+                            {t('whatsapp.prompts.clickToStart')}
                           </p>
                         </div>
                         <MessageCircle className="w-5 h-5 text-green-500 ml-2 group-hover:scale-110 transition-transform" />
@@ -110,7 +111,7 @@ export function WhatsAppFloat() {
                 {/* Quick Actions */}
                 {/* <div className="pt-3 border-t border-border">
                   <div className="text-xs text-muted-foreground text-center mb-3">
-                    {t('quickActions')}
+                    {t('whatsapp.quickActions.title')}
                   </div>
                   <div className="grid grid-cols-2 gap-2">
                     <Button
@@ -121,7 +122,7 @@ export function WhatsAppFloat() {
                       }
                       className="text-xs h-8"
                     >
-                      {t('bookAppointment')}
+                      {t('whatsapp.quickActions.bookAppointment')}
                     </Button>
                     <Button
                       variant="outline"
@@ -131,7 +132,7 @@ export function WhatsAppFloat() {
                       }
                       className="text-xs h-8"
                     >
-                      {t('askPrices')}
+                      {t('whatsapp.quickActions.askPrices')}
                     </Button>
                   </div>
                 </div> */}

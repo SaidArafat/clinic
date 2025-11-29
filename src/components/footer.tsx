@@ -1,5 +1,3 @@
-import { useLanguage } from '@/contexts'
-import { scrollToSection } from '@/lib/utils'
 import {
   Check,
   Clock,
@@ -13,23 +11,26 @@ import {
   Youtube
 } from 'lucide-react'
 
+import { useLanguage } from '@/contexts'
+import { scrollToSection } from '@/lib/utils'
+
 export function Footer() {
   const { t } = useLanguage()
 
   const quickLinks = [
-    { name: t('home'), href: '#hero' },
-    { name: t('about'), href: '#about' },
-    { name: t('services'), href: '#services' },
-    { name: t('reviews'), href: '#reviews' },
-    { name: t('contact'), href: '#contact' }
+    { name: t('shared.nav.home'), href: '#hero' },
+    { name: t('shared.nav.about'), href: '#about' },
+    { name: t('shared.nav.services'), href: '#services' },
+    { name: t('shared.nav.reviews'), href: '#reviews' },
+    { name: t('shared.nav.contact'), href: '#contact' }
   ]
 
   const specializations = [
-    t('spineConditions'),
-    t('neuroConditions'),
-    t('sportsConditions'),
-    t('jointsConditions'),
-    t('surgeryConditions')
+    t('shared.serviceCategories.spine'),
+    t('shared.serviceCategories.neuro'),
+    t('shared.serviceCategories.sports'),
+    t('shared.serviceCategories.joints'),
+    t('shared.serviceCategories.surgery')
   ]
 
   const socialLinks = [
@@ -63,13 +64,13 @@ export function Footer() {
           <div className="space-y-4">
             <div>
               <h3 className="text-xl font-bold text-foreground mb-2">
-                {t('heroTitle')}
+                {t('hero.heading.title')}
               </h3>
               <p className="text-sm text-muted-foreground">
-                {t('consultantPhysio')}
+                {t('footer.labels.role')}
               </p>
               <p className="text-sm text-muted-foreground mt-2">
-                {t('experienceFooter')}
+                {t('footer.labels.experience')}
               </p>
             </div>
 
@@ -85,8 +86,8 @@ export function Footer() {
               <div className="flex items-start space-x-3">
                 <Clock className="w-4 h-4 text-primary mt-0.5" />
                 <div className="text-sm text-muted-foreground">
-                  <div>{t('workingHoursWeekdays')}</div>
-                  <div>{t('workingHoursFriday')}</div>
+                  <div>{t('contact.info.workingHoursWeekdays')}</div>
+                  <div>{t('contact.info.workingHoursFriday')}</div>
                 </div>
               </div>
             </div>
@@ -95,7 +96,7 @@ export function Footer() {
           {/* Quick Links */}
           <div>
             <h4 className="font-bold text-foreground mb-4">
-              {t('quickLinks')}
+              {t('footer.labels.quickLinks')}
             </h4>
             <ul className="space-y-2">
               {quickLinks.map(link => (
@@ -114,7 +115,7 @@ export function Footer() {
           {/* Specializations */}
           <div>
             <h4 className="font-bold text-foreground mb-4">
-              {t('ourSpecializations')}
+              {t('footer.labels.ourSpecializations')}
             </h4>
             <ul className="space-y-2">
               {specializations.map((spec, index) => (
@@ -129,22 +130,26 @@ export function Footer() {
           <div className="space-y-6">
             <div>
               <h4 className="font-bold text-foreground mb-4">
-                {t('locations')}
+                {t('contact.info.locations')}
               </h4>
               <div className="space-y-3">
                 <div className="flex items-start space-x-2">
                   <MapPin className="w-4 h-4 text-primary mt-0.5" />
                   <div className="text-sm text-muted-foreground">
-                    <div className="font-medium">{t('locationZayed')}</div>
-                    <div>{t('zayedAddress')}</div>
+                    <div className="font-medium">
+                      {t('contact.branches.zayed.name')}
+                    </div>
+                    <div>{t('contact.branches.zayed.address')}</div>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-2">
                   <MapPin className="w-4 h-4 text-primary mt-0.5" />
                   <div className="text-sm text-muted-foreground">
-                    <div className="font-medium">{t('location6Oct')}</div>
-                    <div>{t('address6Oct')}</div>
+                    <div className="font-medium">
+                      {t('contact.branches.october.name')}
+                    </div>
+                    <div>{t('contact.branches.october.address')}</div>
                   </div>
                 </div>
               </div>
@@ -153,7 +158,7 @@ export function Footer() {
             {/* Social Links */}
             <div>
               <h4 className="font-bold text-foreground mb-4">
-                {t('followUs')}
+                {t('footer.labels.followUs')}
               </h4>
               <div className="grid grid-cols-4 gap-3">
                 {socialLinks.map(social => (
@@ -201,21 +206,21 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-muted-foreground text-center md:text-start flex items-center gap-1">
               <Copyright className="w-4 h-4" />
-              {new Date().getFullYear()} {t('copyright')}
+              {new Date().getFullYear()} {t('footer.legal.copyright')}
             </p>
 
             <div className="flex flex-wrap justify-center md:justify-end gap-4 text-sm text-muted-foreground">
               <span className="flex items-center gap-1">
                 <Check className="w-4 h-4" strokeWidth={2.5} />
-                {t('consultationsAvailable')}
+                {t('footer.labels.consultationsAvailable')}
               </span>
               <span className="flex items-center gap-1">
                 <House className="w-4 h-4" strokeWidth={2} />
-                {t('homeVisits')}
+                {t('footer.labels.homeVisits')}
               </span>
               <span className="flex items-center gap-1">
                 <Globe className="w-4 h-4" strokeWidth={1.5} />
-                {t('arabicEnglish')}
+                {t('footer.labels.arabicEnglish')}
               </span>
             </div>
           </div>

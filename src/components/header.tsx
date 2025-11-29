@@ -1,7 +1,9 @@
-import { useLanguage, useTheme } from '@/contexts'
 import { Languages, Menu, Moon, Sun, X } from 'lucide-react'
 import { useState } from 'react'
-import { Button } from './ui/button'
+
+import { Button } from '@/components/ui/button'
+import { useLanguage, useTheme } from '@/contexts'
+import { scrollToSection } from '@/lib/utils'
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -9,19 +11,16 @@ export function Header() {
   const { theme, setTheme } = useTheme()
 
   const navigation = [
-    { name: t('home'), href: '#hero' },
-    { name: t('about'), href: '#about' },
-    { name: t('services'), href: '#services' },
-    { name: t('reviews'), href: '#reviews' },
-    { name: t('contact'), href: '#contact' }
+    { name: t('shared.nav.home'), href: '#hero' },
+    { name: t('shared.nav.about'), href: '#about' },
+    { name: t('shared.nav.services'), href: '#services' },
+    { name: t('shared.nav.reviews'), href: '#reviews' },
+    { name: t('shared.nav.contact'), href: '#contact' }
   ]
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-      setIsOpen(false)
-    }
+  const handleNavClick = (href: string) => {
+    scrollToSection(href)
+    setIsOpen(false)
   }
 
   return (
@@ -31,10 +30,10 @@ export function Header() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <div className="text-xl md:text-2xl font-bold text-primary">
-              {t('heroTitle')}
+              {t('hero.heading.title')}
             </div>
             <div className="text-xs md:text-sm text-muted-foreground">
-              {t('consultantPhysiotherapist')}
+              {t('hero.heading.subtitle')}
             </div>
           </div>
 
@@ -100,7 +99,7 @@ export function Header() {
               {navigation.map(item => (
                 <button
                   key={item.name}
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={() => handleNavClick(item.href)}
                   className="block w-full text-start px-3 py-2 rounded-md text-base font-medium text-muted-foreground hover:text-primary hover:bg-accent transition-colors duration-200"
                 >
                   {item.name}

@@ -1,13 +1,14 @@
-import { useLanguage } from '@/contexts'
 import { Check, Clock, MapPin, Navigation, Phone } from 'lucide-react'
-import { Button } from './ui/button'
+
+import { Button } from '@/components/ui/button'
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle
-} from './ui/card'
+} from '@/components/ui/card'
+import { useLanguage, type TranslationKey } from '@/contexts'
 
 export function Contact() {
   const { t } = useLanguage()
@@ -15,14 +16,14 @@ export function Contact() {
   const locations = [
     {
       id: 'zayed',
-      name: t('locationZayed'),
+      name: t('contact.branches.zayed.name'),
       priority: 1,
-      address: t('zayedAddress'),
+      address: t('contact.branches.zayed.address'),
       phone: '+20 106 949 4211',
       whatsapp: '+20 106 949 4211',
       hours: {
-        weekdays: t('workingHoursWeekdays'),
-        friday: t('workingHoursFriday')
+        weekdays: t('contact.info.workingHoursWeekdays'),
+        friday: t('contact.info.workingHoursFriday')
       },
       coordinates: { lat: 30.0444, lng: 30.97 },
       mapUrl: 'https://maps.app.goo.gl/TGc5hpngHSoH26Wp8',
@@ -35,14 +36,14 @@ export function Contact() {
     },
     {
       id: 'october',
-      name: t('location6Oct'),
+      name: t('contact.branches.october.name'),
       priority: 2,
-      address: t('address6Oct'),
+      address: t('contact.branches.october.address'),
       phone: '+20 100 800 9763',
       whatsapp: '+20 100 800 9763',
       hours: {
-        weekdays: t('workingHoursWeekdays'),
-        friday: t('workingHoursFriday')
+        weekdays: t('contact.info.workingHoursWeekdays'),
+        friday: t('contact.info.workingHoursFriday')
       },
       coordinates: { lat: 29.9097, lng: 30.9746 },
       mapUrl: 'https://maps.app.goo.gl/8sijaUFwADjkcgRb6',
@@ -63,10 +64,10 @@ export function Contact() {
     window.open(`tel:${phone}`)
   }
 
-  const additionalInfo = [
-    'homeVisitsAvailable',
-    'followUpPrograms',
-    'multilingualService'
+  const additionalInfo: TranslationKey[] = [
+    'contact.booking.homeVisitsAvailable',
+    'contact.booking.followUpPrograms',
+    'contact.booking.multilingualService'
   ]
 
   return (
@@ -75,10 +76,10 @@ export function Contact() {
         {/* Section Header */}
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            {t('contactTitle')}
+            {t('contact.heading.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            {t('contactDescription')}
+            {t('contact.heading.description')}
           </p>
         </div>
 
@@ -93,7 +94,7 @@ export function Contact() {
               >
                 {location.priority === 1 && (
                   <div className="absolute top-4 end-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-medium z-10">
-                    {t('mainBranch')}
+                    {t('shared.clinics.mainBranch')}
                   </div>
                 )}
 
@@ -111,7 +112,9 @@ export function Contact() {
                     <div className="flex items-center space-x-3">
                       <Phone className="w-5 h-5 text-green-500" />
                       <div>
-                        <div className="font-medium">{t('phoneNumbers')}</div>
+                        <div className="font-medium">
+                          {t('contact.info.phoneNumbers')}
+                        </div>
                         <button
                           onClick={() => callPhone(location.phone)}
                           className="text-primary hover:underline"
@@ -126,7 +129,7 @@ export function Contact() {
                       <Clock className="w-5 h-5 text-blue-500 mt-0.5" />
                       <div>
                         <div className="font-medium mb-1">
-                          {t('workingHours')}
+                          {t('contact.info.workingHours')}
                         </div>
                         <div className="text-sm text-muted-foreground space-y-1">
                           <div>{location.hours.weekdays}</div>
@@ -139,7 +142,7 @@ export function Contact() {
                   {/* Features */}
                   <div className="sr-only">
                     <div className="font-medium mb-3">
-                      {t('clinicFeatures')}:
+                      {t('contact.labels.clinicFeatures')}:
                     </div>
                     <div className="grid grid-cols-2 gap-2">
                       {location.features.map((feature, index) => (
@@ -162,7 +165,7 @@ export function Contact() {
                       className="flex items-center space-x-2"
                     >
                       <Navigation className="w-4 h-4" />
-                      <span>{t('directions')}</span>
+                      <span>{t('contact.labels.directions')}</span>
                     </Button>
 
                     <Button
@@ -171,7 +174,7 @@ export function Contact() {
                       dir="ltr"
                     >
                       <Phone className="w-4 h-4" />
-                      <span>{t('callNow')}</span>
+                      <span>{t('contact.labels.callNow')}</span>
                     </Button>
                   </div>
 
@@ -184,10 +187,10 @@ export function Contact() {
                       <div className="text-center group-hover:scale-105 transition-transform">
                         <MapPin className="w-12 h-12 text-primary mx-auto mb-2" />
                         <div className="font-medium text-foreground">
-                          {t('viewOnGoogleMaps')}
+                          {t('contact.map.viewOnGoogleMaps')}
                         </div>
                         <div className="text-sm text-muted-foreground">
-                          {t('clickToOpenDirections')}
+                          {t('contact.map.clickToOpenDirections')}
                         </div>
                       </div>
                     </div>
@@ -202,16 +205,18 @@ export function Contact() {
         <Card className="max-w-2xl mx-auto bg-primary/5 border-primary/20">
           <CardHeader className="text-center">
             <CardTitle className="text-primary">
-              {t('emergencyConsultations')}
+              {t('contact.emergency.title')}
             </CardTitle>
-            <CardDescription>{t('emergencyDescription')}</CardDescription>
+            <CardDescription>
+              {t('contact.emergency.description')}
+            </CardDescription>
           </CardHeader>
           <CardContent className="text-center space-y-4">
             <div className="text-2xl font-bold text-foreground" dir="ltr">
               +20 100 800 9763
             </div>
             <div className="text-sm text-muted-foreground">
-              {t('emergencyAvailable')}
+              {t('contact.emergency.availability')}
             </div>
             <Button
               variant="outline"
@@ -219,7 +224,7 @@ export function Contact() {
               onClick={() => callPhone('+20 100 800 9763')}
             >
               <Phone className="me-2 h-5 w-5" />
-              {t('emergencyContact')}
+              {t('contact.emergency.contact')}
             </Button>
           </CardContent>
         </Card>
@@ -227,10 +232,10 @@ export function Contact() {
         {/* Additional Info */}
         <div className="text-center mt-12 p-6 bg-muted/50 rounded-lg">
           <h3 className="font-bold text-foreground mb-2">
-            {t('bookingTitle')}
+            {t('contact.booking.title')}
           </h3>
           <p className="text-muted-foreground mb-4">
-            {t('bookingDescription')}
+            {t('contact.booking.description')}
           </p>
           <ul className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
             {additionalInfo.map(item => (

@@ -1,17 +1,3 @@
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { useLanguage, useVideoPlayer } from '@/contexts'
-
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger
-} from '@/components/ui/dialog'
-import { services } from '@/data/services'
-import { cn } from '@/lib/utils'
 import {
   ChevronRight,
   MapPin,
@@ -21,7 +7,22 @@ import {
   Star
 } from 'lucide-react'
 import { useState } from 'react'
-import { ImageWithFallback } from './fallback-images/image-with-fallback'
+
+import { ImageWithFallback } from '@/components/fallback-images/image-with-fallback'
+import { useLanguage, useVideoPlayer } from '@/contexts'
+import { services } from '@/data/services'
+import { cn } from '@/lib/utils'
+
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger
+} from '@/components/ui/dialog'
 
 export function Services() {
   const [activeService, setActiveService] = useState(0)
@@ -35,10 +36,10 @@ export function Services() {
         {/* Section Header */}
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            {t('ourServices')}
+            {t('services.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            {t('servicesDescription')}
+            {t('services.description')}
           </p>
         </div>
 
@@ -117,9 +118,7 @@ export function Services() {
                 <span className="w-6 h-6">
                   <img
                     src={services[activeService].icon}
-                    alt={t(
-                      `servicesSection.spineDisorders.${services[activeService].description}`
-                    )}
+                    alt={t(services[activeService].description)}
                   />
                 </span>
                 <h3 className="text-2xl md:text-3xl font-bold text-foreground">
@@ -136,7 +135,7 @@ export function Services() {
               <CardHeader>
                 <CardTitle className="flex items-center space-x-2">
                   <span>🛠️</span>
-                  <span>{t('servicesSection.videos')}</span>
+                  <span>{t('services.labels.videos')}</span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -187,14 +186,14 @@ function Consultation() {
   const locations = [
     {
       id: 'zayed',
-      name: t('sheikhZayedClinic'),
+      name: t('shared.clinics.sheikhZayed'),
       phone: '+201069494211',
       address: 'Sheikh Zayed City, Giza',
       priority: 1
     },
     {
       id: 'october',
-      name: t('sixthOctoberClinic'),
+      name: t('shared.clinics.sixthOctober'),
       phone: '+201008009763',
       address: '6th October - Cairo Medical Center',
       priority: 2
@@ -214,7 +213,7 @@ function Consultation() {
     <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
       <DialogTrigger asChild>
         <Button size="lg" className="w-full md:w-auto px-8 py-6 text-lg h-auto">
-          {t('bookConsultation')}
+          {t('shared.actions.bookConsultation')}
           <ChevronRight
             className={cn('ms-2 h-5 w-5', language === 'ar' && 'rotate-180')}
           />
@@ -224,9 +223,11 @@ function Consultation() {
         <DialogHeader>
           <DialogTitle>
             <p className="text-lg text-green-600 dark:text-green-400">
-              {t('contactViaWhatsApp')}
+              {t('whatsapp.heading')}
             </p>
-            <p className="text-sm text-muted-foreground">{t('chooseClinic')}</p>
+            <p className="text-sm text-muted-foreground">
+              {t('whatsapp.chooseClinic')}
+            </p>
           </DialogTitle>
           <DialogDescription>
             <div className="pt-0 space-y-3">
@@ -247,7 +248,7 @@ function Consultation() {
                           </h3>
                           {location.priority === 1 && (
                             <span className="bg-primary text-center text-primary-foreground text-xs px-2 py-0.5 rounded-full">
-                              {t('mainBranch')}
+                              {t('shared.clinics.mainBranch')}
                             </span>
                           )}
                         </div>
@@ -255,7 +256,7 @@ function Consultation() {
                           {location.address}
                         </p>
                         <p className="text-xs text-green-600 dark:text-green-400 font-medium">
-                          {t('clickToStart')}
+                          {t('whatsapp.prompts.clickToStart')}
                         </p>
                       </div>
                       <MessageCircle className="w-5 h-5 text-green-500 ml-2 group-hover:scale-110 transition-transform" />
@@ -266,7 +267,7 @@ function Consultation() {
               {/* Quick Actions */}
               {/* <div className="pt-3 border-t border-border">
                 <div className="text-xs text-muted-foreground text-center mb-3">
-                  {t('quickActions')}
+                  {t('whatsapp.quickActions.title')}
                 </div>
                 <div className="grid grid-cols-2 gap-2">
                   <Button
@@ -277,7 +278,7 @@ function Consultation() {
                     }
                     className="text-xs h-8"
                   >
-                    {t('bookAppointment')}
+                    {t('whatsapp.quickActions.bookAppointment')}
                   </Button>
                   <Button
                     variant="outline"
@@ -287,7 +288,7 @@ function Consultation() {
                     }
                     className="text-xs h-8"
                   >
-                    {t('askPrices')}
+                    {t('whatsapp.quickActions.askPrices')}
                   </Button>
                 </div>
               </div> */}
