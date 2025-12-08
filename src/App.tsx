@@ -1,3 +1,6 @@
+'use client'
+import { useEffect } from 'react'
+
 import {
   About,
   Contact,
@@ -17,6 +20,10 @@ import {
 } from '@/contexts'
 
 export default function App() {
+  useEffect(() => {
+    document.body.classList.add('app-loaded')
+  }, [])
+
   return (
     <ThemeProvider>
       <LanguageProvider>

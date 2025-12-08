@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://drashrafkotob.github.io/peakmotion.therapy/sitemap.xml

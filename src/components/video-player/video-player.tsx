@@ -53,9 +53,7 @@ export default function VideoPlayer({
             width="100%"
             className="h-96"
             src={submittedUrl}
-            // src="https://www.youtube.com/embed/62kErCeG2rI?enablejsapi=1&origin=https://example.com/"
-            // src="https://www.youtube.com/embed/62kErCeG2rI?enablejsapi=1&origin=https://example.com/"
-            // src="https://youtube.com/embed/5i9SzaumaRg?enablejsapi=1&origin=https://example.com/"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
         </main>
