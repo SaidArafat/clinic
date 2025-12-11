@@ -25,11 +25,6 @@ export default function VideoPlayer({
     return null
   }
 
-  // const submittedUrl = `${src}?enablejsapi=1&origin=https://example.com/`
-  const submittedUrl = `${src}?enablejsapi=1&origin=https://drashrafkotob.github.io/`
-
-  console.log(submittedUrl)
-
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild className="sr-only">
@@ -49,13 +44,21 @@ export default function VideoPlayer({
           </DialogDescription>
         </DialogHeader>
         <main>
-          <iframe
+          <video
+            autoPlay
+            playsInline
+            loop
+            controls
             width="100%"
-            className="h-96"
-            src={submittedUrl}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+            preload="metadata"
+            className="h-96 bg-primary rounded-sm"
+          >
+            <source
+              src={`https://raw.githubusercontent.com/SaidArafat/cloud-video/main/${src}`}
+              type="video/mp4"
+            />
+            Your browser does not support HTML5 video.
+          </video>
         </main>
       </DialogContent>
     </Dialog>

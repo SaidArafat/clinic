@@ -144,7 +144,7 @@ export function Hero() {
                   onClick={() =>
                     openVideo({
                       title: t('hero.heading.description'),
-                      src: 'https://www.youtube.com/embed/62kErCeG2rI'
+                      src: '1-hero-video.mp4'
                     })
                   }
                   className="absolute inset-0 flex items-center justify-center bg-black/20 rounded-xl opacity-50 hover:opacity-100 transition-opacity cursor-pointer"

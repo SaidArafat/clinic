@@ -34,28 +34,34 @@ export const services: ServiceConfig[] = [
       // todo add here services.sections.spineDisorders.lowerBackPain
       {
         title: 'services.sections.spineDisorders.discProlapse',
-        src: 'https://www.youtube.com/embed/HVIKGZz-npU'
+        // src: 'https://www.youtube.com/embed/HVIKGZz-npU'
+        src: '1-disc-prolapse.mp4'
       },
       {
         title:
           'services.sections.spineDisorders.muscleKnotsDiscHerniationAndSciatica',
-        src: 'https://www.youtube.com/embed/QmnV0ZamM6U'
+        // src: 'https://www.youtube.com/embed/QmnV0ZamM6U'
+        src: '2-muscle-knots-disc-herniation-and-sciatica.mp4'
       },
       {
         title: 'services.sections.spineDisorders.kyphosis',
-        src: 'https://www.youtube.com/embed/DCfWhOCqrJ4'
+        // src: 'https://www.youtube.com/embed/DCfWhOCqrJ4'
+        src: '3-kyphosis.mp4'
       },
       {
         title: 'services.sections.spineDisorders.scoliosis',
-        src: 'https://www.youtube.com/embed/ZsasorS07CI'
+        // src: 'https://www.youtube.com/embed/ZsasorS07CI'
+        src: '4-scoliosis.mp4'
       },
       {
         title: 'services.sections.spineDisorders.neckPain',
-        src: 'https://www.youtube.com/embed/Mzt3H3B9-S0'
+        // src: 'https://www.youtube.com/embed/Mzt3H3B9-S0'
+        src: '5-neck-pain.mp4'
       }
     ],
     hasVideo: true,
-    video: 'https://www.youtube.com/embed/DCfWhOCqrJ4'
+    // video: 'https://www.youtube.com/embed/DCfWhOCqrJ4'
+    video: '3-kyphosis.mp4'
   },
   {
     id: 'neurological-rehabilitation',
@@ -67,11 +73,13 @@ export const services: ServiceConfig[] = [
     treatments: [
       {
         title: 'services.sections.neurologicalRehabilitation.dropFoot',
-        src: 'https://www.youtube.com/embed/g6m89gypafs'
+        // src: 'https://www.youtube.com/embed/g6m89gypafs'
+        src: '6-drop-foot.mp4'
       },
       {
         title: 'services.sections.neurologicalRehabilitation.hemiparesis',
-        src: 'https://www.youtube.com/embed/ScJAAG_T2sU'
+        // src: 'https://www.youtube.com/embed/ScJAAG_T2sU'
+        src: '7-hemiparesis.mp4'
       },
       // added
       {
@@ -80,7 +88,8 @@ export const services: ServiceConfig[] = [
       }
     ],
     hasVideo: true,
-    video: 'https://www.youtube.com/embed/g6m89gypafs'
+    // video: 'https://www.youtube.com/embed/g6m89gypafs'
+    video: '6-drop-foot.mp4'
   },
   {
     id: 'post-orthopedic-surgery',
@@ -94,11 +103,13 @@ export const services: ServiceConfig[] = [
 
       {
         title: 'services.sections.postOrthopedicSurgery.rehabilitation',
-        src: 'https://www.youtube.com/embed/YkY-nceZAoQ'
+        // src: 'https://www.youtube.com/embed/YkY-nceZAoQ'
+        src: '8-rehabilitation.mp4'
       },
       {
         title: 'services.sections.postOrthopedicSurgery.elbowStiffness',
-        src: 'https://www.youtube.com/embed/t6xsAt8xyBI'
+        // src: 'https://www.youtube.com/embed/t6xsAt8xyBI'
+        src: '9-elbow-stiffness.mp4'
       },
       {
         title: 'services.sections.postOrthopedicSurgery.totalKneeReplacement',
@@ -106,7 +117,8 @@ export const services: ServiceConfig[] = [
       }
     ],
     hasVideo: true,
-    video: 'https://www.youtube.com/embed/YkY-nceZAoQ'
+    // video: 'https://www.youtube.com/embed/YkY-nceZAoQ'
+    video: '8-rehabilitation.mp4'
   },
   {
     id: 'recovery-sessions.',
@@ -123,7 +135,8 @@ export const services: ServiceConfig[] = [
       }
     ],
     hasVideo: false,
-    video: 'https://www.youtube.com/embed/YkY-nceZAoQ'
+    // video: 'https://www.youtube.com/embed/YkY-nceZAoQ'
+    video: '8-rehabilitation.mp4'
   },
   {
     id: 'sports-injury',
@@ -135,15 +148,18 @@ export const services: ServiceConfig[] = [
     treatments: [
       {
         title: 'services.sections.sportsInjury.ankleSprain',
-        src: 'https://www.youtube.com/embed/B0Cno18Chpc'
+        // src: 'https://www.youtube.com/embed/B0Cno18Chpc'
+        src: '10-ankle-sprain.mp4'
       },
       {
         title: 'services.sections.sportsInjury.shoulderPain',
-        src: 'https://www.youtube.com/embed/8W2_pXkd_Ck'
+        // src: 'https://www.youtube.com/embed/8W2_pXkd_Ck'
+        src: '11-shoulder-pain.mp4'
       },
       {
         title: 'services.sections.sportsInjury.meniscusTearDegeneration',
-        src: 'https://www.youtube.com/embed/7Gv9V1Ao5vI'
+        // src: 'https://www.youtube.com/embed/7Gv9V1Ao5vI'
+        src: '12-meniscus-tear-degeneration.mp4'
       },
       // added
       {
@@ -152,7 +168,8 @@ export const services: ServiceConfig[] = [
       }
     ],
     hasVideo: true,
-    video: 'https://www.youtube.com/embed/B0Cno18Chpc'
+    // video: 'https://www.youtube.com/embed/B0Cno18Chpc'
+    video: '10-ankle-sprain.mp4'
   },
   {
     id: 'lymphatic-drainage',
@@ -164,11 +181,13 @@ export const services: ServiceConfig[] = [
     treatments: [
       {
         title: 'services.sections.lymphaticDrainage.lymphaticDrainage',
-        src: 'https://www.youtube.com/embed/uRJZ_vH0rZY'
+        // src: 'https://www.youtube.com/embed/uRJZ_vH0rZY'
+        src: '13-lymphatic-drainage.mp4'
       }
     ],
     hasVideo: true,
-    video: 'https://www.youtube.com/embed/uRJZ_vH0rZY'
+    // video: 'https://www.youtube.com/embed/uRJZ_vH0rZY'
+    video: '13-lymphatic-drainage.mp4'
   },
   {
     id: 'tension-headache',
@@ -180,11 +199,13 @@ export const services: ServiceConfig[] = [
     treatments: [
       {
         title: 'services.sections.tensionHeadache.tensionHeadache',
-        src: 'https://www.youtube.com/embed/5i1M6pql3WA'
+        // src: 'https://www.youtube.com/embed/5i1M6pql3WA'
+        src: '14-tension-headache.mp4'
       }
     ],
     hasVideo: true,
-    video: 'https://www.youtube.com/embed/5i1M6pql3WA'
+    // video: 'https://www.youtube.com/embed/5i1M6pql3WA'
+    video: '14-tension-headache.mp4'
   },
   {
     id: 'prenatal-physical-therapy',
@@ -197,10 +218,12 @@ export const services: ServiceConfig[] = [
       {
         title:
           'services.sections.prenatalPhysicalTherapy.prenatalPhysicalTherapy',
-        src: 'https://www.youtube.com/embed/TWOyVBAMSB0'
+        // src: 'https://www.youtube.com/embed/TWOyVBAMSB0'
+        src: '15-prenatal-physical-therapy.mp4'
       }
     ],
     hasVideo: true,
-    video: 'https://www.youtube.com/embed/TWOyVBAMSB0'
+    // video: 'https://www.youtube.com/embed/TWOyVBAMSB0'
+    video: '15-prenatal-physical-therapy.mp4'
   }
 ]
