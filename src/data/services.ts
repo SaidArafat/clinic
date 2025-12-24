@@ -84,7 +84,7 @@ export const services: ServiceConfig[] = [
       // added
       {
         title: 'services.sections.neurologicalRehabilitation.paraParaparesis',
-        src: null
+        src: '17-para-paraparesis.mp4'
       }
     ],
     hasVideo: true,
@@ -113,7 +113,7 @@ export const services: ServiceConfig[] = [
       },
       {
         title: 'services.sections.postOrthopedicSurgery.totalKneeReplacement',
-        src: null
+        src: '18-total-knee-replacement.mp4'
       }
     ],
     hasVideo: true,
@@ -131,12 +131,12 @@ export const services: ServiceConfig[] = [
       // added
       {
         title: 'services.sections.recoverySessions.title',
-        src: null
+        src: '16-recovery-sessions.mp4'
       }
     ],
-    hasVideo: false,
+    hasVideo: true,
     // video: 'https://www.youtube.com/embed/YkY-nceZAoQ'
-    video: '8-rehabilitation.mp4'
+    video: '16-recovery-sessions.mp4'
   },
   {
     id: 'sports-injury',
@@ -164,7 +164,7 @@ export const services: ServiceConfig[] = [
       // added
       {
         title: 'services.sections.sportsInjury.adductorsStrain',
-        src: null
+        src: '19-adductors-strain.mp4'
       }
     ],
     hasVideo: true,

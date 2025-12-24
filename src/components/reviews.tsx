@@ -747,7 +747,7 @@ export function Reviews() {
 
         {/* Overall Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
-          <div className="text-center p-6 bg-card rounded-lg border border-border">
+          <div className="text-center p-6 bg-card rounded-lg border border-border flex flex-col items-center">
             <div className="text-3xl font-bold text-foreground">4.6/5</div>
             <div className="text-sm text-muted-foreground">Average Rating</div>
             <StarRating rating={5} />

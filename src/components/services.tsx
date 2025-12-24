@@ -133,19 +133,18 @@ export function Services() {
             {/* Treatment Methods */}
             <Card>
               <CardHeader>
-                <CardTitle className="flex items-center space-x-2">
-                  <span>🛠️</span>
+                <CardTitle className="flex items-center space-x-2 border-b pb-2">
+                  <span>
+                    <SquarePlay
+                      strokeWidth={2}
+                      className="w-5 h-5 flex-shrink-0"
+                    />
+                  </span>
                   <span>{t('services.labels.videos')}</span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div
-                  className={cn(
-                    'grid grid-cols-1 md:grid-cols-2 gap-3',
-                    services[activeService].treatments.length === 1 &&
-                      'md:grid-cols-1'
-                  )}
-                >
+                <div className="flex flex-col gap-3 -mt-2 min-h-44  overflow-hidden">
                   {services[activeService].treatments.map(
                     ({ title, src }, index) => (
                       <button
